@@ -6,6 +6,7 @@ App As appinfo:
         ClearCollect(ClientDetails, Distinct(Projects,'Client Name'));
         Set(EditForm,false);
         Set(isAllocationFormValid,false);
+        Set(isSearch,true);
         
         Set(displaySideMenu,true);
         Set(projectSortColumn,"Client Name");
