@@ -1930,7 +1930,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_ClientName)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =LookUp(Projects,'Client Name'=Client_Name_Data.Selected.Value)
                             Width: =Parent.Width/2.1
@@ -2097,7 +2097,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_ProjectCodename)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =Project_Code_Value.Selected
                             Width: =Parent.Width/2.1
@@ -2255,7 +2255,7 @@
                             DisplayMode: =DisplayMode.View
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_geo)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_geo)
                             Required: =false
                             Update: =DataCardValue32.Value
@@ -2323,7 +2323,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_projecttype)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_projecttype)
                             Required: =false
                             Update: =DataCardValue33.Value
@@ -2391,7 +2391,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_allocationstatus)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =AllocationStatus.Selected.Value
                             Width: =Parent.Width/2.1
@@ -2488,7 +2488,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_skillset)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_skillset)
                             Required: =IsSkillSetRequired
                             Update: =DataCardValue30.Value
@@ -2563,7 +2563,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_startdate)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =IsStartDateRequired
                             Update: =If(Not IsBlank(DateValue6.SelectedDate), DateTime(Year(DateValue6.SelectedDate), Month(DateValue6.SelectedDate), Day(DateValue6.SelectedDate), Value(HourValue6.Selected.Value), Value(MinuteValue6.Selected.Value), Second(DateValue6.SelectedDate)))
                             Width: =Parent.Width/2.1
@@ -2667,7 +2667,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_releasedate)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =IsReleaseDateRequired
                             Update: =If(Not IsBlank(DateValue5.SelectedDate), DateTime(Year(DateValue5.SelectedDate), Month(DateValue5.SelectedDate), Day(DateValue5.SelectedDate), Value(HourValue5.Selected.Value), Value(MinuteValue5.Selected.Value), Second(DateValue5.SelectedDate)))
                             Width: =Parent.Width/2.1
@@ -2771,7 +2771,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_ReportingManager)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =IsReportingManagerRequired
                             Update: =DataCardValue29.Selected
                             Width: =Parent.Width/2.1
@@ -3011,7 +3011,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_DeliveryHead)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =IsDeliveryHeadRequired
                             Update: =DataCardValue25.Selected
                             Width: =Parent.Width/2.1
@@ -3483,7 +3483,7 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_billability)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =IsBillabilityRequired
                             Update: =DataCardValue24.Selected.Value
                             Width: =Parent.Width/2.1
@@ -3525,7 +3525,7 @@
                                 FontColor: =RGBA(255, 0, 0, 1)
                                 Height: =30
                                 Size: =10
-                                Text: =Parent.Error
+                                Text: ="Billability is required"
                                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =Parent.Width - 48
                                 Wrap: =true
@@ -3555,10 +3555,10 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_percentageofallocation)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =IsPercentageOfAllocationRequired
                             Update: =Value(DataCardValue26.Value)
-                            Width: =Parent.Width/2.1
+                            Width: =278
                             X: =1
                             Y: =5
                             ZIndex: =6
@@ -3597,7 +3597,7 @@
                                 FontColor: =RGBA(255, 0, 0, 1)
                                 Height: =30
                                 Size: =10
-                                Text: =Parent.Error
+                                Text: ="Percentage of Allocation is required"
                                 Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
                                 Width: =Parent.Width - 48
                                 Wrap: =true
