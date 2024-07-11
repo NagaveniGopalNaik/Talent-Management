@@ -173,7 +173,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);
+                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
