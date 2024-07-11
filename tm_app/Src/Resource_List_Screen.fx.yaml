@@ -1926,13 +1926,13 @@
                             BorderColor: =App.Theme.Colors.Darker40
                             BorderStyle: =BorderStyle.Solid
                             DataField: ="tl_ClientName"
-                            Default: =ThisItem.'Client Name'
+                            Default: =Allocated_Projects_List.Selected.'Client Name'
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_ClientName)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =70
                             Required: =true
-                            Update: =Client_Name_Data.Selected
+                            Update: =LookUp(Projects,'Client Name'=Client_Name_Data.Selected.Value)
                             Width: =Parent.Width/2.1
                             X: =0
                             Y: =0
