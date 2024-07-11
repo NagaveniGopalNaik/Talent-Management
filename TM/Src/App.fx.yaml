@@ -1,0 +1,42 @@
+App As appinfo:
+    BackEnabled: =true
+    Formulas: =
+    OnStart: |-
+        =Set(AppFont, Font.Arial);
+        
+        Set(displaySideMenu,true);
+        Set(projectSortColumn,"Client Name");
+        Set(ProjectFilterScreen,false);
+        Set(ApplyFilter,false);
+        Set(Project_Sort,false);
+        Set(Create_Project,false);
+        Set(Active_Page,"Home");
+        Set(Project_update,false);
+        Set(New_Project_Allocation,false);
+        Set(Display_Project_Details,true);
+        
+        Set(Blocked_List_Sort,false);
+        Set(Apply_Block_Filter,false);
+        Set(BlockedFilterScreen,false);
+        
+        Set(Resource_List_Sort,false);
+        Set(Apply_Resource_Filter,false);
+        Set(ResourceFilterScreen,false);
+        Set(Resource_employee_details,true);
+        
+        Set(Open_List_Sort,false);
+        Set(Apply_Open_Filter,false);
+        Set(OpenFilterScreen,false);
+        
+        Set(Proposed_List_Sort,false);
+        Set(Apply_Proposed_Filter,false);
+        Set(ProposedFilterScreen,false);
+    Theme: =Robo_theme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

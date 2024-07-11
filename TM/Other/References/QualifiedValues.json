@@ -1,0 +1,72 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_tl_resource_forms",
+      "Namespace": "Resources (Forms)",
+      "Values": {
+        "Information": "3df7ccb5-f8b9-4f22-b905-fada1dafcc88"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_project_forms",
+      "Namespace": "Projects (Forms)",
+      "Values": {
+        "Information": "22c13740-50b4-4561-b669-f3509d96d971",
+        "Project Main Form": "b15c4bda-0e54-4b14-b2ca-72c0f55fa1e3"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_projectallocation_forms",
+      "Namespace": "Project Allocations (Forms)",
+      "Values": {
+        "Information": "0474e811-0d48-4522-8f2b-c3364e3e5330"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_clientname_forms",
+      "Namespace": "Client Names (Forms)",
+      "Values": {
+        "Information": "a685d865-ea64-4de3-9220-fdc0b3d66c14"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_projectcodename_forms",
+      "Namespace": "Project Codenames (Forms)",
+      "Values": {
+        "Information": "56b65b6e-15e6-4ac4-b1ce-ed3abcb9b804"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_projecttype_forms",
+      "Namespace": "Project Types (Forms)",
+      "Values": {
+        "Information": "00d6be95-b1d1-473c-a1f4-c36d30bb5617"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_geo_forms",
+      "Namespace": "Geos (Forms)",
+      "Values": {
+        "Information": "130d455f-f1f3-41ce-aadd-ef5ec28aff50"
+      }
+    },
+    {
+      "Kind": "default.cds_tl_project_allocation_forms",
+      "Namespace": "Project_Allocations (Forms)",
+      "Values": {
+        "Information": "054a4807-b6fa-4bd9-9f02-f8092f7b1ab3"
+      }
+    }
+  ]
+}
