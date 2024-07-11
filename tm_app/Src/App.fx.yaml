@@ -5,6 +5,7 @@ App As appinfo:
         =Set(AppFont, Font.Arial);
         ClearCollect(ClientDetails, Distinct(Projects,'Client Name'));
         Set(EditForm,false);
+        Set(ResourceSelectedData,First(Resouce_List.AllItems));
         
         Set(displaySideMenu,true);
         Set(projectSortColumn,"Client Name");

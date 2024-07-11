@@ -356,7 +356,7 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(isSearch,true);Set(isSearch,false);
+                        OnChange: =Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(isSearch,true);Set(ResourceSelectedData,First(Resouce_List.AllItems));Button3.onSelect;
                         Placeholder: ="Search"
                         TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
                         Type: ='TextInputCanvas.Type'.Text
@@ -517,7 +517,7 @@
                     "Resouce_List As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Dashed
-                        Default: =If(isSearch,First(Resouce_List.AllItems))
+                        Default: =ResourceSelectedData
                         DelayItemLoading: =true
                         Items: |-
                             =SortByColumns(
@@ -564,7 +564,7 @@
                         LayoutMinHeight: =150
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
-                        OnSelect: =Set(isSearch,false);ViewForm(Resource_View_Form);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);
+                        OnSelect: =Set(isSearch,false);ViewForm(Resource_View_Form);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(ResourceSelectedData,Resouce_List.Selected);
                         ShowScrollbar: =false
                         TemplatePadding: =0
                         TemplateSize: =80
@@ -3687,7 +3687,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker10
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =App.Theme.Colors.Darker10
-        OnSelect: =NewForm(Project_Allocation_Form)
+        OnSelect: =ResetForm(Project_Allocation_Form);NewForm(Project_Allocation_Form)
         PressedBorderColor: =App.Theme.Colors.Darker40
         PressedColor: =Self.Color
         PressedFill: =App.Theme.Colors.Darker40
@@ -3951,4 +3951,26 @@
             X: =519
             Y: =361
             ZIndex: =13
+
+    Button3 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |-
+            =Set(TempProject, ResourceSelectedData);
+            Set(ResourceSelectedData, TempProject)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =15
+        Text: ="Button"
+        X: =587
+        ZIndex: =18
 
