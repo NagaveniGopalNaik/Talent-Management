@@ -1,0 +1,111 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tl_project_allocations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tl_project_allocation",
+    "MaxGetRowsCount": 500,
+    "Name": "Project_Allocations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "tl_allocationstatus": "Allocation Status",
+      "tl_billability": "Billability",
+      "tl_ClientName": "Client Name",
+      "tl_DeliveryHead": "Delivery Head",
+      "tl_geo": "Geo",
+      "tl_name": "Id",
+      "tl_percentageofallocation": "Percentage of Allocation",
+      "tl_Project": "Project",
+      "tl_project_allocation_AsyncOperations": "System Jobs",
+      "tl_project_allocation_BulkDeleteFailures": "Bulk Delete Failures",
+      "tl_project_allocation_DuplicateBaseRecord": "Duplicate Records (tl_project_allocation_DuplicateBaseRecord)",
+      "tl_project_allocation_DuplicateMatchingRecord": "Duplicate Records (tl_project_allocation_DuplicateMatchingRecord)",
+      "tl_project_allocation_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tl_project_allocation_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tl_project_allocation_ProcessSession": "Process Sessions",
+      "tl_project_allocation_SyncErrors": "Sync Errors",
+      "tl_project_allocationid": "Project_Allocation",
+      "tl_ProjectCodename": "Project Codename",
+      "tl_projecttype": "Project Type",
+      "tl_releasedate": "Release Date",
+      "tl_ReportingManager": "Reporting Manager",
+      "tl_Resource": "Resource",
+      "tl_skillset": "Skillset",
+      "tl_startdate": "Start Date",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Project_Allocations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Project_Allocations (Views)",
+    "Name": "_tl_project_allocation_views",
+    "RelatedEntityName": "Project_Allocations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "21043d7e-8b29-4a28-9b54-8c44cf01d7d5": "Project_Allocation Associated View",
+      "4701d4aa-d06c-43aa-acb1-1cbe8ae937ef": "Inactive Project_Allocations",
+      "d15e4691-c1df-454f-9114-5967b039a93b": "Project_Allocation Advanced Find View",
+      "dba4bb73-e39f-4b98-a034-b4a27f52ecda": "Project_Allocation Lookup View",
+      "fcb98962-eb8e-46e0-a3de-7c6a8fe21189": "Active Project_Allocations"
+    }
+  },
+  {
+    "DisplayName": "Status (Project_Allocations)",
+    "Name": "tl_project_allocation_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Project_Allocations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Project_Allocations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Project_Allocations)",
+    "Name": "tl_project_allocation_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Project_Allocations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Project_Allocations",
+    "Type": "OptionSetInfo"
+  }
+]

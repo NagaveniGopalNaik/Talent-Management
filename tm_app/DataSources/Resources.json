@@ -1,0 +1,126 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tl_resources",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tl_resource",
+    "MaxGetRowsCount": 500,
+    "Name": "Resources",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "tl_band": "Band",
+      "tl_benchpercentage": "Bench Percentage",
+      "tl_city": "City",
+      "tl_contactnumber": "Contact Number",
+      "tl_dateofjoining": "Date of Joining",
+      "tl_employeename": "Employee Name",
+      "tl_employmentstatus": "Employment Status",
+      "tl_lwd": "LWD",
+      "tl_name": "Employee Id",
+      "tl_officeemailid": "Office Email Id",
+      "tl_officelocation": "Office Location",
+      "tl_primaryskill": "Primary Skill",
+      "tl_Project_Allocation": "Project Allocations (tl_Project_Allocation)",
+      "tl_project_allocation_DeliveryHead_tl_resource": "Project_Allocations (tl_project_allocation_DeliveryHead_tl_resource)",
+      "tl_project_allocation_ReportingManager_tl_resource": "Project_Allocations (tl_project_allocation_ReportingManager_tl_resource)",
+      "tl_project_allocation_Resource_tl_resource": "Project_Allocations (tl_project_allocation_Resource_tl_resource)",
+      "tl_project1": "Project 1",
+      "tl_project2": "Project 2",
+      "tl_project3": "Project 3",
+      "tl_project4": "Project 4",
+      "tl_project5": "Project 5",
+      "tl_project6": "Project 6",
+      "tl_projectallocation_DeliveryHead_tl_resource": "Project Allocations (tl_projectallocation_DeliveryHead_tl_resource)",
+      "tl_projectallocation_ReportingManager_tl_resource": "Project Allocations (tl_projectallocation_ReportingManager_tl_resource)",
+      "tl_projectallocation_Resource_tl_resource": "Project Allocations (tl_projectallocation_Resource_tl_resource)",
+      "tl_resource_AsyncOperations": "System Jobs",
+      "tl_resource_BulkDeleteFailures": "Bulk Delete Failures",
+      "tl_resource_DuplicateBaseRecord": "Duplicate Records (tl_resource_DuplicateBaseRecord)",
+      "tl_resource_DuplicateMatchingRecord": "Duplicate Records (tl_resource_DuplicateMatchingRecord)",
+      "tl_resource_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tl_resource_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tl_resource_ProcessSession": "Process Sessions",
+      "tl_resource_SyncErrors": "Sync Errors",
+      "tl_resourceid": "Resource",
+      "tl_secondaryskill": "Secondary Skill",
+      "tl_state": "State",
+      "tl_yearsofexperience": "Years of Experience",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Resources",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Resources (Views)",
+    "Name": "_tl_resource_views",
+    "RelatedEntityName": "Resources",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0095b1f2-d696-4a55-ad27-1f65ddc98a9f": "Resource Associated View",
+      "3296b205-8b34-ef11-8409-000d3a4efb05": "Proposed List",
+      "4cb2a4c0-8b6b-4742-9e0d-1a455a3dd662": "Resource Lookup View",
+      "7d9380a8-b11c-4824-9f92-039b138b5b1b": "Resource List",
+      "9b380528-1bd3-43d4-b404-afa4123d9dbb": "Resource Advanced Find View",
+      "bb78b863-8034-ef11-8409-000d3a4efb05": "Blocked List",
+      "fed32ea1-ab33-ef11-8409-000d3a4efb05": "Open List"
+    }
+  },
+  {
+    "DisplayName": "Status (Resources)",
+    "Name": "tl_resource_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Resources"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Resources",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Resources)",
+    "Name": "tl_resource_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Resources"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Resources",
+    "Type": "OptionSetInfo"
+  }
+]

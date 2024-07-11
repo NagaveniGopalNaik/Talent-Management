@@ -1,0 +1,231 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tl_projects",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tl_project",
+    "MaxGetRowsCount": 500,
+    "Name": "Projects",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "tl_enddate": "End Date",
+      "tl_geo": "Geo",
+      "tl_id": "Id",
+      "tl_isfromdigite": "isFromDigite",
+      "tl_name": "Client Name",
+      "tl_project_allocation_ClientName_tl_project": "Project_Allocations (tl_project_allocation_ClientName_tl_project)",
+      "tl_project_allocation_Project_tl_project": "Project_Allocations (tl_project_allocation_Project_tl_project)",
+      "tl_project_allocation_ProjectCodename_tl_project": "Project_Allocations (tl_project_allocation_ProjectCodename_tl_project)",
+      "tl_project_AsyncOperations": "System Jobs",
+      "tl_project_BulkDeleteFailures": "Bulk Delete Failures",
+      "tl_project_DuplicateBaseRecord": "Duplicate Records (tl_project_DuplicateBaseRecord)",
+      "tl_project_DuplicateMatchingRecord": "Duplicate Records (tl_project_DuplicateMatchingRecord)",
+      "tl_project_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tl_project_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tl_project_ProcessSession": "Process Sessions",
+      "tl_project_SyncErrors": "Sync Errors",
+      "tl_projectallocation_Project_tl_project": "Project Allocations (tl_projectallocation_Project_tl_project)",
+      "tl_projectallocation_Selected_Project_tl_project": "Project Allocations (tl_projectallocation_Selected_Project_tl_project)",
+      "tl_projectcodename": "Project Codename",
+      "tl_projectid": "Project",
+      "tl_projectname": "Project Name",
+      "tl_projectstatus": "Project Status",
+      "tl_projecttype": "Project Type",
+      "tl_select": "select",
+      "tl_startdate": "Start Date",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Projects",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Projects (Views)",
+    "Name": "_tl_project_views",
+    "RelatedEntityName": "Projects",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "148f9b6b-8364-4e3c-bf01-921d4f1894fc": "Project Lookup View",
+      "1e450eb2-df39-ef11-8409-000d3a4efb05": "Client Name",
+      "4a12d50c-d178-44ff-ac34-f0e2d29fad31": "Project Advanced Find View",
+      "8240604c-a02f-ef11-840a-6045bdd61880": "Closed Projects",
+      "8b9c4fd5-df39-ef11-8409-000d3a4efb05": "Project Codename",
+      "8df17805-e039-ef11-8409-000d3a4efb05": "Project Status",
+      "a34fcca8-a02f-ef11-840a-6045bdd61880": "On Hold Projects",
+      "a48f3bf4-df39-ef11-8409-000d3a4efb05": "Project Type",
+      "c5f1080c-c472-4a09-925e-3fe2b38cbde2": "All Projects",
+      "db46207c-a02f-ef11-840a-6045bdd61880": "Active Projects",
+      "e8272c11-e039-ef11-8409-000d3a4efb05": "Geo",
+      "f981b507-9b4b-43cb-bd0c-a641fc8f562e": "Project Associated View"
+    }
+  },
+  {
+    "DisplayName": "Geo",
+    "Name": "tl_geo",
+    "OptionSetInfoNameMapping": {
+      "126800000": "India",
+      "126800001": "US",
+      "126800002": "EMEA",
+      "126800003": "UK",
+      "126800004": "Japan",
+      "126800005": "Others"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_geo",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_geo",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Projects)",
+    "Name": "tl_project_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Projects)",
+    "Name": "tl_project_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "isFromDigite (Projects)",
+    "Name": "tl_project_tl_isfromdigite",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_isfromdigite",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "tl_isfromdigite",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "select (Projects)",
+    "Name": "tl_project_tl_select",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_select",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "tl_select",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Project Status",
+    "Name": "tl_projectstatus",
+    "OptionSetInfoNameMapping": {
+      "126800000": "In Progress",
+      "126800001": "On Hold",
+      "126800002": "Closed",
+      "126800003": "Terminated",
+      "126800004": "Yet to Start"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_projectstatus",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_projectstatus",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Project Type",
+    "Name": "tl_projecttype",
+    "OptionSetInfoNameMapping": {
+      "126800000": "T&M",
+      "126800001": "FP",
+      "126800002": "Managed Services",
+      "126800003": "T&M (Staff Augmentation)",
+      "126800004": "Internal",
+      "126800005": "secondment",
+      "126800006": "Marketing"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_projecttype",
+        "OptionSetReferenceEntityName": "Projects"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_projecttype",
+    "RelatedEntityName": "Projects",
+    "Type": "OptionSetInfo"
+  }
+]

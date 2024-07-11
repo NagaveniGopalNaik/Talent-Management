@@ -1,0 +1,160 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tl_projectallocations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tl_projectallocation",
+    "MaxGetRowsCount": 500,
+    "Name": "Project Allocations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "tl_allocationstatus": "Allocation Status",
+      "tl_billability": "Billability",
+      "tl_DeliveryHead": "Delivery Head",
+      "tl_enddate": "Release Date",
+      "tl_name": "Id",
+      "tl_percentageofallocation": "Percentage of Allocation",
+      "tl_Project": "Client Name",
+      "tl_Project_Allocation": "Resources",
+      "tl_projectallocation_AsyncOperations": "System Jobs",
+      "tl_projectallocation_BulkDeleteFailures": "Bulk Delete Failures",
+      "tl_projectallocation_DuplicateBaseRecord": "Duplicate Records (tl_projectallocation_DuplicateBaseRecord)",
+      "tl_projectallocation_DuplicateMatchingRecord": "Duplicate Records (tl_projectallocation_DuplicateMatchingRecord)",
+      "tl_projectallocation_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tl_projectallocation_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tl_projectallocation_ProcessSession": "Process Sessions",
+      "tl_projectallocation_SyncErrors": "Sync Errors",
+      "tl_projectallocationid": "Project Allocation",
+      "tl_ReportingManager": "Reporting Manager",
+      "tl_Resource": "Resource",
+      "tl_Selected_Project": "Selected_Project",
+      "tl_skillset": "SkillSet",
+      "tl_startdate": "Start Date",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Project Allocations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Project Allocations (Views)",
+    "Name": "_tl_projectallocation_views",
+    "RelatedEntityName": "Project Allocations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "143960d2-3d48-4300-b542-da7adb6f772e": "All Project Allocations",
+      "26649c45-0632-ef11-8409-000d3a4efb05": "Blocked Projects",
+      "3f6cd82b-a5ed-4d5e-88b0-b25ecd206ff4": "Project Allocation Advanced Find View",
+      "40264115-0223-4275-af78-4506c0bf144f": "Project Allocation Lookup View",
+      "bf3369bc-0532-ef11-8409-000d3a4efb05": "Allocated Projects",
+      "f1ece63d-056f-4f7e-be78-dde7903ca07e": "Project Allocation Associated View",
+      "f73a3307-0632-ef11-8409-000d3a4efb05": "Proposed Projects"
+    }
+  },
+  {
+    "DisplayName": "Allocation Satus",
+    "Name": "tl_allocationsatus",
+    "OptionSetInfoNameMapping": {
+      "126800000": "Allocated",
+      "126800001": "Proposed",
+      "126800002": "Blocked"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_allocationstatus",
+        "OptionSetReferenceEntityName": "Project Allocations"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "tl_allocationstatus",
+        "OptionSetReferenceEntityName": "Project_Allocations"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_allocationstatus",
+    "RelatedEntityName": "Project Allocations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Billability",
+    "Name": "tl_billability",
+    "OptionSetInfoNameMapping": {
+      "126800000": "Yes",
+      "126800001": "No"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_billability",
+        "OptionSetReferenceEntityName": "Project Allocations"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "tl_billability",
+        "OptionSetReferenceEntityName": "Project_Allocations"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_billability",
+    "RelatedEntityName": "Project Allocations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Project Allocations)",
+    "Name": "tl_projectallocation_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Project Allocations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Project Allocations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Project Allocations)",
+    "Name": "tl_projectallocation_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Project Allocations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Project Allocations",
+    "Type": "OptionSetInfo"
+  }
+]
