@@ -3719,8 +3719,8 @@
         Text: ="Back"
         Visible: =EditForm
         Width: =72
-        X: =1230
-        Y: =117
+        X: =1235
+        Y: =120
         ZIndex: =17
 
     Blocked_Screen_Filter_3 As group:
