@@ -385,7 +385,7 @@
                         DisabledColor: =RGBA(244, 244, 244, 1)
                         Height: =20
                         Icon: =Icon.Filter
-                        OnSelect: =Set(ResourceFilterScreen,true);
+                        OnSelect: =Set(ResourceFilterScreen,true);Set(isSearch,true)
                         Visible: =!Apply_Resource_Filter
                         Width: =20
                         ZIndex: =4
