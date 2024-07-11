@@ -1958,24 +1958,13 @@
                                 DisplayMode: =Parent.DisplayMode
                                 FontSize: =10
                                 Height: =32
-                                Items: =Distinct(Projects,'Client Name')
+                                Items: =ClientDetails
+                                OnChange: =
                                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                                 Width: =Parent.Width - 48
                                 X: =24
                                 Y: =DataCardKey33.Y + DataCardKey33.Height + 4
                                 ZIndex: =2
-
-                                Value1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                    FieldDisplayName: ="Value"
-                                    FieldName: ="Value"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =1
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =89
 
                                 "'End Date1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
                                     FieldDisplayName: ="End Date"
@@ -1995,7 +1984,7 @@
                                     FieldType: ="d"
                                     FieldVariantName: ="textualColumn"
                                     Height: =100
-                                    Order: =7
+                                    Order: =8
                                     Width: =100
                                     X: =0
                                     Y: =0
@@ -2007,7 +1996,7 @@
                                     FieldType: ="l"
                                     FieldVariantName: ="textualColumn"
                                     Height: =100
-                                    Order: =6
+                                    Order: =7
                                     Width: =100
                                     X: =0
                                     Y: =0
@@ -2019,7 +2008,7 @@
                                     FieldType: ="l"
                                     FieldVariantName: ="textualColumn"
                                     Height: =100
-                                    Order: =5
+                                    Order: =6
                                     Width: =100
                                     X: =0
                                     Y: =0
@@ -2031,7 +2020,7 @@
                                     FieldType: ="l"
                                     FieldVariantName: ="textualColumn"
                                     Height: =100
-                                    Order: =4
+                                    Order: =5
                                     Width: =100
                                     X: =0
                                     Y: =0
@@ -2043,7 +2032,7 @@
                                     FieldType: ="s"
                                     FieldVariantName: ="textualColumn"
                                     Height: =100
-                                    Order: =3
+                                    Order: =4
                                     Width: =100
                                     X: =0
                                     Y: =0
@@ -2055,11 +2044,23 @@
                                     FieldType: ="s"
                                     FieldVariantName: ="textualColumn"
                                     Height: =100
-                                    Order: =2
+                                    Order: =3
                                     Width: =100
                                     X: =0
                                     Y: =0
                                     ZIndex: =96
+
+                                Value1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                    FieldDisplayName: ="Value"
+                                    FieldName: ="Value"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =2
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =97
 
                             ErrorMessage29 As Text:
                                 DisplayMode: =DisplayMode.Edit
@@ -2306,6 +2307,73 @@
                                 Y: =DataCardKey40.Y
                                 ZIndex: =4
 
+                        "'Project Type_DataCard2' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="tl_projecttype"
+                            Default: =ThisItem.'Project Type'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_projecttype)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_projecttype)
+                            Required: =false
+                            Update: =DataCardValue33.Value
+                            Width: =Parent.Width/2.1
+                            X: =1
+                            Y: =1
+                            ZIndex: =1
+
+                            DataCardKey42 As Text:
+                                AutoHeight: =true
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Size: =10
+                                Text: =Parent.DisplayName
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue33 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =Project_Code_Value.Selected.'Project Type'
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey42.Y + DataCardKey42.Height + 4
+                                ZIndex: =2
+
+                            ErrorMessage42 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue33.Y + DataCardValue33.Height
+                                ZIndex: =3
+
+                            StarVisible42 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey42.Y
+                                ZIndex: =4
+
                         "'Allocation Status_DataCard1' As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard":
                             BorderColor: =App.Theme.Colors.Darker40
                             BorderStyle: =BorderStyle.Solid
@@ -2398,6 +2466,77 @@
                                 Width: =30
                                 X: =0
                                 Y: =DataCardKey39.Y
+                                ZIndex: =4
+
+                        Skillset_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="tl_skillset"
+                            Default: =ThisItem.Skillset
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_skillset)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_skillset)
+                            Required: =IsSkillSetRequired
+                            Update: =DataCardValue30.Value
+                            Width: =Parent.Width/2.1
+                            X: =1
+                            Y: =2
+                            ZIndex: =1
+
+                            DataCardKey37 As Text:
+                                AutoHeight: =true
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Size: =10
+                                Text: =Parent.DisplayName
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue30 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                TriggerOutput: ="FocusOut"
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =Parent.Default
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey37.Y + DataCardKey37.Height + 4
+                                ZIndex: =2
+
+                            ErrorMessage37 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue30.Y + DataCardValue30.Height
+                                ZIndex: =3
+
+                            StarVisible37 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(255, 0, 0, 1)
+                                Height: =30
+                                Size: =10
+                                Text: ="*"
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey37.Y
                                 ZIndex: =4
 
                         "'Start Date_DataCard1' As typedDataCard.fluentV9DateTimeEditCard":
@@ -2498,6 +2637,106 @@
                                 Width: =30
                                 X: =0
                                 Y: =DataCardKey38.Y
+                                ZIndex: =7
+
+                        "'Release Date_DataCard1' As typedDataCard.fluentV9DateTimeEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="tl_releasedate"
+                            Default: =ThisItem.'Release Date'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_releasedate)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            Required: =IsReleaseDateRequired
+                            Update: =If(Not IsBlank(DateValue5.SelectedDate), DateTime(Year(DateValue5.SelectedDate), Month(DateValue5.SelectedDate), Day(DateValue5.SelectedDate), Value(HourValue5.Selected.Value), Value(MinuteValue5.Selected.Value), Second(DateValue5.SelectedDate)))
+                            Width: =Parent.Width/2.1
+                            X: =1
+                            Y: =3
+                            ZIndex: =1
+
+                            DataCardKey36 As Text:
+                                AutoHeight: =true
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Size: =10
+                                Text: =Parent.DisplayName
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DateValue5 As 'Date picker'":
+                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
+                                Height: =32
+                                SelectedDate: =Parent.Default
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Width: =(Parent.Width - 48)
+                                X: =24
+                                Y: =DataCardKey36.Y + DataCardKey36.Height + 4
+                                ZIndex: =2
+
+                            HourValue5 As Dropdown.pcfdataset:
+                                DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =28
+                                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                                Visible: =false
+                                Width: =DateValue5.Width / 2 - 10
+                                X: =DateValue5.X + DateValue5.Width + 10
+                                Y: =DateValue5.Y + 1
+                                ZIndex: =3
+
+                            Separator2 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =HourValue5.Height
+                                Text: |-
+                                    =":"
+                                Width: =10
+                                X: =HourValue5.X + HourValue5.Width
+                                Y: =HourValue5.Y
+                                ZIndex: =4
+
+                            MinuteValue5 As Dropdown.pcfdataset:
+                                DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =28
+                                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                                Visible: =false
+                                Width: =HourValue5.Width
+                                X: =HourValue5.X + HourValue5.Width + Separator2.Width
+                                Y: =HourValue5.Y + 1
+                                ZIndex: =5
+
+                            ErrorMessage36 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DateValue5.Y + DateValue5.Height
+                                ZIndex: =6
+
+                            StarVisible36 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(255, 0, 0, 1)
+                                Height: =20
+                                Size: =10
+                                Text: ="*"
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey36.Y
                                 ZIndex: =7
 
                         "'Reporting Manager_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
@@ -2736,476 +2975,6 @@
                                 Y: =DataCardKey35.Y
                                 ZIndex: =4
 
-                        Resource_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
-                            BorderColor: =App.Theme.Colors.Darker40
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="tl_Resource"
-                            Default: =ThisItem.Resource
-                            DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_Resource)
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
-                            Required: =false
-                            Update: =DataCardValue28.Selected
-                            Visible: =false
-                            Width: =262
-                            X: =0
-                            Y: =6
-                            ZIndex: =1
-
-                            DataCardKey34 As Text:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Size: =10
-                                Text: =Parent.DisplayName
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
-                            DataCardValue28 As Combobox.pcfdataset:
-                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                DefaultSelectedItems: =LookUp(Resources,'Employee Id'=Resouce_List.Selected.'Employee Id')
-                                DisplayMode: =Parent.DisplayMode
-                                Height: =32
-                                Items: =Choices([@Project_Allocations].tl_Resource)
-                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Width: =Parent.Width - 48
-                                X: =24
-                                Y: =DataCardKey34.Y + DataCardKey34.Height + 4
-                                ZIndex: =2
-
-                                LWD1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                    FieldDisplayName: ="LWD"
-                                    FieldName: ="tl_lwd"
-                                    FieldType: ="d"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =14
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =33
-
-                                "'Employment Status1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Employment Status"
-                                    FieldName: ="tl_employmentstatus"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =13
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =34
-
-                                "'Secondary Skill1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Secondary Skill"
-                                    FieldName: ="tl_secondaryskill"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =12
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =35
-
-                                "'Primary Skill1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Primary Skill"
-                                    FieldName: ="tl_primaryskill"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =11
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =36
-
-                                "'Date of Joining1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Date of Joining"
-                                    FieldName: ="tl_dateofjoining"
-                                    FieldType: ="d"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =10
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =37
-
-                                "'Office Location1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Office Location"
-                                    FieldName: ="tl_officelocation"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =9
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =38
-
-                                City1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                    FieldDisplayName: ="City"
-                                    FieldName: ="tl_city"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =8
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =39
-
-                                State1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                    FieldDisplayName: ="State"
-                                    FieldName: ="tl_state"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =7
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =40
-
-                                "'Years of Experience1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Years of Experience"
-                                    FieldName: ="tl_yearsofexperience"
-                                    FieldType: ="n"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =6
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =41
-
-                                Band1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
-                                    FieldDisplayName: ="Band"
-                                    FieldName: ="tl_band"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =5
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =42
-
-                                "'Office Email Id1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Office Email Id"
-                                    FieldName: ="tl_officeemailid"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =4
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =43
-
-                                "'Contact Number1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Contact Number"
-                                    FieldName: ="tl_contactnumber"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =3
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =44
-
-                                "'Employee Name1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Employee Name"
-                                    FieldName: ="tl_employeename"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =2
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =45
-
-                                "'Employee Id1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
-                                    FieldDisplayName: ="Employee Id"
-                                    FieldName: ="tl_name"
-                                    FieldType: ="s"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =100
-                                    Order: =1
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =46
-
-                            ErrorMessage33 As Text:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: =Parent.Error
-                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =Parent.Width - 48
-                                Wrap: =true
-                                X: =24
-                                Y: =DataCardValue28.Y + DataCardValue28.Height
-                                ZIndex: =3
-
-                            StarVisible33 As Text:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =20
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                X: =0
-                                Y: =DataCardKey34.Y
-                                ZIndex: =4
-
-                        "'Project Type_DataCard2' As typedDataCard.fluentV9TextualEditCard":
-                            BorderColor: =App.Theme.Colors.Darker40
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="tl_projecttype"
-                            Default: =ThisItem.'Project Type'
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_projecttype)
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
-                            MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_projecttype)
-                            Required: =false
-                            Update: =DataCardValue33.Value
-                            Width: =Parent.Width/2.1
-                            X: =1
-                            Y: =1
-                            ZIndex: =1
-
-                            DataCardKey42 As Text:
-                                AutoHeight: =true
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Size: =10
-                                Text: =Parent.DisplayName
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
-                            "DataCardValue33 As 'Text input'":
-                                AccessibleLabel: =Parent.DisplayName
-                                DisplayMode: =Parent.DisplayMode
-                                FontSize: =10
-                                Height: =32
-                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                                Required: =Parent.Required
-                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Value: =Project_Code_Value.Selected.'Project Type'
-                                Width: =Parent.Width - 48
-                                X: =24
-                                Y: =DataCardKey42.Y + DataCardKey42.Height + 4
-                                ZIndex: =2
-
-                            ErrorMessage42 As Text:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: =Parent.Error
-                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =Parent.Width - 48
-                                Wrap: =true
-                                X: =24
-                                Y: =DataCardValue33.Y + DataCardValue33.Height
-                                ZIndex: =3
-
-                            StarVisible42 As Text:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: ="*"
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                X: =0
-                                Y: =DataCardKey42.Y
-                                ZIndex: =4
-
-                        Skillset_DataCard1 As typedDataCard.fluentV9TextualEditCard:
-                            BorderColor: =App.Theme.Colors.Darker40
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="tl_skillset"
-                            Default: =ThisItem.Skillset
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_skillset)
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
-                            MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_skillset)
-                            Required: =IsSkillSetRequired
-                            Update: =DataCardValue30.Value
-                            Width: =Parent.Width/2.1
-                            X: =1
-                            Y: =2
-                            ZIndex: =1
-
-                            DataCardKey37 As Text:
-                                AutoHeight: =true
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Size: =10
-                                Text: =Parent.DisplayName
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
-                            "DataCardValue30 As 'Text input'":
-                                AccessibleLabel: =Parent.DisplayName
-                                DisplayMode: =Parent.DisplayMode
-                                FontSize: =10
-                                Height: =32
-                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                                Required: =Parent.Required
-                                TriggerOutput: ="FocusOut"
-                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Value: =Parent.Default
-                                Width: =Parent.Width - 48
-                                X: =24
-                                Y: =DataCardKey37.Y + DataCardKey37.Height + 4
-                                ZIndex: =2
-
-                            ErrorMessage37 As Text:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: =Parent.Error
-                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =Parent.Width - 48
-                                Wrap: =true
-                                X: =24
-                                Y: =DataCardValue30.Y + DataCardValue30.Height
-                                ZIndex: =3
-
-                            StarVisible37 As Text:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                FontColor: =RGBA(255, 0, 0, 1)
-                                Height: =30
-                                Size: =10
-                                Text: ="*"
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                X: =0
-                                Y: =DataCardKey37.Y
-                                ZIndex: =4
-
-                        "'Release Date_DataCard1' As typedDataCard.fluentV9DateTimeEditCard":
-                            BorderColor: =App.Theme.Colors.Darker40
-                            BorderStyle: =BorderStyle.Solid
-                            DataField: ="tl_releasedate"
-                            Default: =ThisItem.'Release Date'
-                            DisplayMode: =Parent.DisplayMode
-                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_releasedate)
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
-                            Required: =IsReleaseDateRequired
-                            Update: =If(Not IsBlank(DateValue5.SelectedDate), DateTime(Year(DateValue5.SelectedDate), Month(DateValue5.SelectedDate), Day(DateValue5.SelectedDate), Value(HourValue5.Selected.Value), Value(MinuteValue5.Selected.Value), Second(DateValue5.SelectedDate)))
-                            Width: =Parent.Width/2.1
-                            X: =1
-                            Y: =3
-                            ZIndex: =1
-
-                            DataCardKey36 As Text:
-                                AutoHeight: =true
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =22
-                                Size: =10
-                                Text: =Parent.DisplayName
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
-                                Weight: ='TextCanvas.Weight'.Semibold
-                                Width: =Parent.Width - 48
-                                Wrap: =false
-                                X: =24
-                                Y: =10
-                                ZIndex: =1
-
-                            "DateValue5 As 'Date picker'":
-                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                DisplayMode: =Parent.DisplayMode
-                                FontSize: =10
-                                Height: =32
-                                SelectedDate: =Parent.Default
-                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                Width: =(Parent.Width - 48)
-                                X: =24
-                                Y: =DataCardKey36.Y + DataCardKey36.Height + 4
-                                ZIndex: =2
-
-                            HourValue5 As Dropdown.pcfdataset:
-                                DefaultSelectedItems: =[Text(Hour(Parent.Default),"00")]
-                                DisplayMode: =Parent.DisplayMode
-                                Height: =28
-                                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
-                                Visible: =false
-                                Width: =DateValue5.Width / 2 - 10
-                                X: =DateValue5.X + DateValue5.Width + 10
-                                Y: =DateValue5.Y + 1
-                                ZIndex: =3
-
-                            Separator2 As Text:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =HourValue5.Height
-                                Text: |-
-                                    =":"
-                                Width: =10
-                                X: =HourValue5.X + HourValue5.Width
-                                Y: =HourValue5.Y
-                                ZIndex: =4
-
-                            MinuteValue5 As Dropdown.pcfdataset:
-                                DefaultSelectedItems: =[Text(Minute(Parent.Default),"00")]
-                                DisplayMode: =Parent.DisplayMode
-                                Height: =28
-                                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
-                                Visible: =false
-                                Width: =HourValue5.Width
-                                X: =HourValue5.X + HourValue5.Width + Separator2.Width
-                                Y: =HourValue5.Y + 1
-                                ZIndex: =5
-
-                            ErrorMessage36 As Text:
-                                DisplayMode: =DisplayMode.Edit
-                                Height: =30
-                                Text: =Parent.Error
-                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =Parent.Width - 48
-                                Wrap: =true
-                                X: =24
-                                Y: =DateValue5.Y + DateValue5.Height
-                                ZIndex: =6
-
-                            StarVisible36 As Text:
-                                Align: ='TextCanvas.Align'.Center
-                                DisplayMode: =DisplayMode.Edit
-                                FontColor: =RGBA(255, 0, 0, 1)
-                                Height: =20
-                                Size: =10
-                                Text: ="*"
-                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
-                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                Width: =30
-                                X: =0
-                                Y: =DataCardKey36.Y
-                                ZIndex: =7
-
                         "'Delivery Head_DataCard1' As typedDataCard.fluentV9ComboBoxEditCard":
                             BorderColor: =App.Theme.Colors.Darker40
                             BorderStyle: =BorderStyle.Solid
@@ -3442,6 +3211,238 @@
                                 Y: =DataCardKey24.Y
                                 ZIndex: =4
 
+                        Resource_DataCard1 As typedDataCard.fluentV9ComboBoxEditCard:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="tl_Resource"
+                            Default: =ThisItem.Resource
+                            DisplayMode: =DisplayMode.View
+                            DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_Resource)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            Required: =false
+                            Update: =DataCardValue28.Selected
+                            Visible: =false
+                            Width: =262
+                            X: =0
+                            Y: =6
+                            ZIndex: =1
+
+                            DataCardKey34 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Size: =10
+                                Text: =Parent.DisplayName
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue28 As Combobox.pcfdataset:
+                                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                                DefaultSelectedItems: =LookUp(Resources,'Employee Id'=Resouce_List.Selected.'Employee Id')
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =32
+                                Items: =Choices([@Project_Allocations].tl_Resource)
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey34.Y + DataCardKey34.Height + 4
+                                ZIndex: =2
+
+                                LWD1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                    FieldDisplayName: ="LWD"
+                                    FieldName: ="tl_lwd"
+                                    FieldType: ="d"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =14
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =33
+
+                                "'Employment Status1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Employment Status"
+                                    FieldName: ="tl_employmentstatus"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =13
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =34
+
+                                "'Secondary Skill1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Secondary Skill"
+                                    FieldName: ="tl_secondaryskill"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =12
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =35
+
+                                "'Primary Skill1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Primary Skill"
+                                    FieldName: ="tl_primaryskill"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =11
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =36
+
+                                "'Date of Joining1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Date of Joining"
+                                    FieldName: ="tl_dateofjoining"
+                                    FieldType: ="d"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =10
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =37
+
+                                "'Office Location1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Office Location"
+                                    FieldName: ="tl_officelocation"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =9
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =38
+
+                                City1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                    FieldDisplayName: ="City"
+                                    FieldName: ="tl_city"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =8
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =39
+
+                                State1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                    FieldDisplayName: ="State"
+                                    FieldName: ="tl_state"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =7
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =40
+
+                                "'Years of Experience1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Years of Experience"
+                                    FieldName: ="tl_yearsofexperience"
+                                    FieldType: ="n"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =6
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =41
+
+                                Band1 As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn:
+                                    FieldDisplayName: ="Band"
+                                    FieldName: ="tl_band"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =5
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =42
+
+                                "'Office Email Id1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Office Email Id"
+                                    FieldName: ="tl_officeemailid"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =4
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =43
+
+                                "'Contact Number1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Contact Number"
+                                    FieldName: ="tl_contactnumber"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =3
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =44
+
+                                "'Employee Name1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Employee Name"
+                                    FieldName: ="tl_employeename"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =2
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =45
+
+                                "'Employee Id1' As PowerApps_CoreControls_ComboboxCanvasTemplate_dataField.textualColumn":
+                                    FieldDisplayName: ="Employee Id"
+                                    FieldName: ="tl_name"
+                                    FieldType: ="s"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =100
+                                    Order: =1
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =46
+
+                            ErrorMessage33 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue28.Y + DataCardValue28.Height
+                                ZIndex: =3
+
+                            StarVisible33 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =20
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey34.Y
+                                ZIndex: =4
+
                         Billability_DataCard1 As typedDataCard.fluentV9ComboBoxOptionSetSingleEditCard:
                             BorderColor: =App.Theme.Colors.Darker40
                             BorderStyle: =BorderStyle.Solid
@@ -3629,7 +3630,6 @@
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(Project_Allocation_Form.Valid,DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =App.Theme.Colors.Primary
         Font: =App.Theme.Font
         FontWeight: =FontWeight.Semibold

@@ -7842,17 +7842,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.AppFont"
+                  "fullyQualifiedName": "App.Proposed_List_Sort"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.AppFont",
+                  "fullyQualifiedName": "App.Proposed_List_Sort",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AppFont",
+                "member": "Proposed_List_Sort",
                 "module": "App",
                 "type": "App"
               }
@@ -7932,17 +7932,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Proposed_List_Sort"
+                  "fullyQualifiedName": "App.AppFont"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Proposed_List_Sort",
+                  "fullyQualifiedName": "App.AppFont",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Proposed_List_Sort",
+                "member": "AppFont",
                 "module": "App",
                 "type": "App"
               }
