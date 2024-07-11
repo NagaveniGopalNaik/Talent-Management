@@ -7842,17 +7842,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.AppFont"
+                  "fullyQualifiedName": "App.Open_List_Sort"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.AppFont",
+                  "fullyQualifiedName": "App.Open_List_Sort",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AppFont",
+                "member": "Open_List_Sort",
                 "module": "App",
                 "type": "App"
               }
@@ -7902,17 +7902,47 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Open_List_Sort"
+                  "fullyQualifiedName": "App.ClientName"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Open_List_Sort",
+                  "fullyQualifiedName": "App.ClientName",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Open_List_Sort",
+                "member": "ClientName",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.AppFont"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.AppFont",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AppFont",
                 "module": "App",
                 "type": "App"
               }
@@ -8368,7 +8398,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Resource_List_Screen\" is 330, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Resource_List_Screen\" is 332, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],

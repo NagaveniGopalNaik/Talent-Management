@@ -661,7 +661,7 @@
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
                         TemplateSize: =116
-                        Visible: =If(Resource_allocated_project,true,false)
+                        Visible: = If(Resource_allocated_project && CountRows(Allocated_Projects_List.AllItems)>0,true,false)
                         Width: =Parent.Width/2
                         ZIndex: =1
 
@@ -676,7 +676,7 @@
                             PaddingLeft: =40
                             PaddingRight: =0
                             PaddingTop: =0
-                            Text: =Concatenate(ThisItem.'Project Codename'.'Project Codename'," - ",ThisItem.'Percentage of Allocation')
+                            Text: =Concatenate(ThisItem.'Project Codename'.'Project Codename',"(",ThisItem.'Project Codename'.'Client Name',")"," - ",ThisItem.'Percentage of Allocation',"%")
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth - 86
                             X: =16
@@ -1954,7 +1954,7 @@
 
                             Client_Name_Data As Combobox.pcfdataset:
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                DefaultSelectedItems: =[Parent.Default]
+                                DefaultSelectedItems: =If(IsMatch(Project_Allocation_Form.DisplayMode,DisplayMode.Edit),(LookUp(ClientDetails,Value=Allocated_Projects_List.Selected.'Project Codename'.'Client Name')),Parent.Default)
                                 DisplayMode: =Parent.DisplayMode
                                 FontSize: =10
                                 Height: =32
@@ -3578,6 +3578,31 @@
                                 X: =0
                                 Y: =DataCardKey29.Y
                                 ZIndex: =4
+
+                    Container5 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: =If(Resource_allocated_project && CountRows(Allocated_Projects_List.AllItems)=0,true,false)
+                        ZIndex: =6
+
+                        No_Record_Text As label:
+                            Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =App.Theme.Colors.Darker10
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Height: =541
+                            Size: =13
+                            Text: ="No Records Found"
+                            Visible: = true
+                            Width: =553
+                            X: =4
+                            ZIndex: =1
 
                 Total_item_4 As label:
                     BorderColor: =App.Theme.Colors.Darker40
