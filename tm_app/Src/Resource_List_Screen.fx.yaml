@@ -3687,7 +3687,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker10
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =App.Theme.Colors.Darker10
-        OnSelect: =ResetForm(Project_Allocation_Form);
+        OnSelect: =NewForm(Project_Allocation_Form)
         PressedBorderColor: =App.Theme.Colors.Darker40
         PressedColor: =Self.Color
         PressedFill: =App.Theme.Colors.Darker40
