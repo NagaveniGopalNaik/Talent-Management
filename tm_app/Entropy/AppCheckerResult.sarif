@@ -7502,17 +7502,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Proposed_List_Sort"
+                  "fullyQualifiedName": "App.OpenFilterScreen"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Proposed_List_Sort",
+                  "fullyQualifiedName": "App.OpenFilterScreen",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Proposed_List_Sort",
+                "member": "OpenFilterScreen",
                 "module": "App",
                 "type": "App"
               }
@@ -7543,6 +7543,36 @@
               },
               "properties": {
                 "member": "Display_Project_Details",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.isAllocationFormValid"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.isAllocationFormValid",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "isAllocationFormValid",
                 "module": "App",
                 "type": "App"
               }
@@ -7622,17 +7652,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.OpenFilterScreen"
+                  "fullyQualifiedName": "App.Proposed_List_Sort"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.OpenFilterScreen",
+                  "fullyQualifiedName": "App.Proposed_List_Sort",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OpenFilterScreen",
+                "member": "Proposed_List_Sort",
                 "module": "App",
                 "type": "App"
               }
@@ -8136,7 +8166,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Resource_List_Screen\" is 334, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Resource_List_Screen\" is 335, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
