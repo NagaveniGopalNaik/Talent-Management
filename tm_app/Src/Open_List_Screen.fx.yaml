@@ -677,11 +677,14 @@
                             ZIndex: =6
 
                     "Allocated_Projects_List_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+                        AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =App.Theme.Colors.Primary
                         BorderThickness: =1
                         DelayItemLoading: =true
                         Items: =Filter(Project_Allocations,(ThisRecord.Resource.'Employee Id'=Resouce_List_1.Selected.'Employee Id'))
                         Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
                         TemplateSize: =116
