@@ -524,26 +524,7 @@
                                 Resources,
                                 Switch(
                                     Active_Page,
-                                    "Resource List", true,
-                                    "Open List", 100 - Sum(
-                                        Filter(
-                                            Project_Allocations,
-                                            Resource.'Employee Id' = 'Employee Id'
-                                        ),
-                                        'Percentage of Allocation'
-                                    ) > 0,
-                                    "Proposed List", !IsEmpty(
-                                        Filter(
-                                            Project_Allocations,
-                                            Resource.'Employee Id' = 'Employee Id' && IsMatch('Allocation Status',"Proposed")
-                                        )
-                                    ),"Blocked List", !IsEmpty(
-                                        Filter(
-                                            Project_Allocations,
-                                            Resource.'Employee Id' = 'Employee Id' && IsMatch('Allocation Status',"Blocked")
-                                        )
-                                    )
-                                ) &&
+                                    "Resource List", true,"Open List",true,"Proposed List",true,"Blocked List",true) &&
                                 (
                                     IsBlank(Resource_Data_Search.Value) || 
                                     StartsWith(Lower('Employee Id'), Lower(Resource_Data_Search.Value)) ||
@@ -1981,7 +1962,7 @@
                                 DisabledColor: =RGBA(244, 244, 244, 1)
                                 Height: =25
                                 Icon: =Icon.ArrowLeft
-                                OnSelect: =Set(EditForm,false)
+                                OnSelect: =Set(New_Project_Allocation,false);Set(Resource_allocated_project,true);Set(EditForm,false);
                                 Visible: =EditForm
                                 Width: =25
                                 X: =10

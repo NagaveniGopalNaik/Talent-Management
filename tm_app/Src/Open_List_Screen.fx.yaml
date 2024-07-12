@@ -2732,7 +2732,7 @@
                             BorderColor: =App.Theme.Colors.Darker40
                             BorderStyle: =BorderStyle.Solid
                             DataField: ="tl_ReportingManager"
-                            Default: =ThisItem.'Reporting Manager'
+                            Default: =ThisItem.tl_ReportingManager
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_ReportingManager)
                             Fill: =RGBA(0, 0, 0, 0)
@@ -2968,7 +2968,7 @@
                             BorderColor: =App.Theme.Colors.Darker40
                             BorderStyle: =BorderStyle.Solid
                             DataField: ="tl_DeliveryHead"
-                            Default: =ThisItem.'Delivery Head'
+                            Default: =ThisItem.tl_DeliveryHead
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_DeliveryHead)
                             Fill: =RGBA(0, 0, 0, 0)
