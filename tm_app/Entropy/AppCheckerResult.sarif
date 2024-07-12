@@ -7772,16 +7772,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Resource_List_Screen"
+                  "fullyQualifiedName": "Resource_List_Screen.IsDeliveryHeadRequired"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Resource_List_Screen",
+                  "fullyQualifiedName": "Resource_List_Screen.IsDeliveryHeadRequired",
                   "relativeAddress": 0
                 }
               },
               "properties": {
+                "member": "IsDeliveryHeadRequired",
                 "module": "Resource_List_Screen",
                 "type": "Resource_List_Screen"
               }
@@ -7793,8 +7794,38 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 8
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Resource_List_Screen.IsReportingManagerRequired"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Resource_List_Screen.IsReportingManagerRequired",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "IsReportingManagerRequired",
+                "module": "Resource_List_Screen",
+                "type": "Resource_List_Screen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -7986,7 +8017,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Resource_List_Screen\" is 337, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Open_List_Screen\" is 322, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
