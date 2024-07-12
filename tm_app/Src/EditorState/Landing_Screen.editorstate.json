@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "Blocked_List_Button": {
+    "Blocked_List_Button_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -215,7 +215,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Blocked_List_Button",
+      "Name": "Blocked_List_Button_3",
       "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
@@ -408,7 +408,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -1196,7 +1196,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Home_Button": {
+    "Home_Button_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1411,7 +1411,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Home_Button",
+      "Name": "Home_Button_3",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -3519,7 +3519,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Open_List_Button": {
+    "Open_List_Button_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -3734,7 +3734,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Open_List_Button",
+      "Name": "Open_List_Button_3",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -3927,13 +3927,13 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
-    "Project_List_Button": {
+    "Project_List_Button_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4148,7 +4148,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Project_List_Button",
+      "Name": "Project_List_Button_3",
       "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
@@ -4347,7 +4347,7 @@
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
-    "Proposed_List_Button": {
+    "Proposed_List_Button_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4562,7 +4562,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Proposed_List_Button",
+      "Name": "Proposed_List_Button_3",
       "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
@@ -4755,13 +4755,13 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
-    "Resource_List_Button": {
+    "Resource_List_Button_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4976,7 +4976,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Resource_List_Button",
+      "Name": "Resource_List_Button_3",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -5359,7 +5359,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "SidebarContainer2_2": {
+    "SidebarContainer2_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -5471,7 +5471,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "SidebarContainer2_2",
+      "Name": "SidebarContainer2_5",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,

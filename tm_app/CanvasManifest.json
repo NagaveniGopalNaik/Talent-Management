@@ -101,7 +101,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 18,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -136,9 +136,6 @@
   "ScreenOrder": [
     "Landing_Screen",
     "Project_Screen",
-    "Blocked_List_Screen",
-    "Resource_List_Screen",
-    "Open_List_Screen",
-    "Proposed_List_Screen"
+    "Resource_List_Screen"
   ]
 }

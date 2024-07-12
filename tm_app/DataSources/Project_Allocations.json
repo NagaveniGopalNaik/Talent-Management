@@ -69,6 +69,47 @@
     }
   },
   {
+    "DisplayName": "Allocation Satus",
+    "Name": "tl_allocationsatus",
+    "OptionSetInfoNameMapping": {
+      "126800000": "Allocated",
+      "126800001": "Proposed",
+      "126800002": "Blocked"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_allocationstatus",
+        "OptionSetReferenceEntityName": "Project_Allocations"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_allocationstatus",
+    "RelatedEntityName": "Project_Allocations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Billability",
+    "Name": "tl_billability",
+    "OptionSetInfoNameMapping": {
+      "126800000": "Yes",
+      "126800001": "No"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tl_billability",
+        "OptionSetReferenceEntityName": "Project_Allocations"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tl_billability",
+    "RelatedEntityName": "Project_Allocations",
+    "Type": "OptionSetInfo"
+  },
+  {
     "DisplayName": "Status (Project_Allocations)",
     "Name": "tl_project_allocation_statecode",
     "OptionSetInfoNameMapping": {

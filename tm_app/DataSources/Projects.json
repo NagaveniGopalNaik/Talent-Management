@@ -190,7 +190,10 @@
       "126800001": "On Hold",
       "126800002": "Closed",
       "126800003": "Terminated",
-      "126800004": "Yet to Start"
+      "126800004": "Yet to Start",
+      "126800005": "Open",
+      "126800006": "ReOpen",
+      "126800007": "-1"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": true,

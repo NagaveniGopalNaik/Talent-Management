@@ -847,7 +847,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Blocked_List_Button_5": {
+    "Blocked_List_Button_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1062,7 +1062,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Blocked_List_Button_5",
+      "Name": "Blocked_List_Button_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
@@ -1255,7 +1255,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -3108,7 +3108,7 @@
       "MetaDataIDKey": "",
       "Name": "Container3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6976,7 +6976,7 @@
       "MetaDataIDKey": "",
       "Name": "delete",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8794,7 +8794,7 @@
       "MetaDataIDKey": "",
       "Name": "filter_off",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9066,7 +9066,7 @@
       "MetaDataIDKey": "",
       "Name": "filter_On",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11039,7 +11039,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Home_Button_5": {
+    "Home_Button_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -11254,7 +11254,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Home_Button_5",
+      "Name": "Home_Button_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -11991,7 +11991,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12679,7 +12679,7 @@
       "MetaDataIDKey": "",
       "Name": "Image1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13006,7 +13006,7 @@
       "MetaDataIDKey": "",
       "Name": "Label2_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14474,7 +14474,7 @@
       "StyleName": "defaultRectangleStyle",
       "Type": "ControlInfo"
     },
-    "Open_List_Button_5": {
+    "Open_List_Button_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -14689,7 +14689,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Open_List_Button_5",
+      "Name": "Open_List_Button_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -14882,7 +14882,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -16743,7 +16743,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Project_List_Button_5": {
+    "Project_List_Button_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -16958,7 +16958,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Project_List_Button_5",
+      "Name": "Project_List_Button_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
@@ -18251,7 +18251,7 @@
       "MetaDataIDKey": "",
       "Name": "ProjectSearch",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18328,7 +18328,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Proposed_List_Button_5": {
+    "Proposed_List_Button_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -18543,7 +18543,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Proposed_List_Button_5",
+      "Name": "Proposed_List_Button_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
@@ -18736,7 +18736,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -18866,7 +18866,7 @@
       "StyleName": "primary2RectangleStyle",
       "Type": "ControlInfo"
     },
-    "Resource_List_Button_5": {
+    "Resource_List_Button_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -19081,7 +19081,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Resource_List_Button_5",
+      "Name": "Resource_List_Button_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -20236,7 +20236,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "SidebarContainer2_7": {
+    "SidebarContainer2_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -20348,7 +20348,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "SidebarContainer2_7",
+      "Name": "SidebarContainer2_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -20592,7 +20592,7 @@
       "MetaDataIDKey": "",
       "Name": "sort",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

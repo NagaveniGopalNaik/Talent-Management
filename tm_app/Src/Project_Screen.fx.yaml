@@ -108,7 +108,7 @@
             X: =11.38
             ZIndex: =2
 
-            SidebarContainer2_7 As groupContainer.verticalAutoLayoutContainer:
+            SidebarContainer2_4 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =App.Theme.Colors.Primary
                 FillPortions: =0
@@ -127,7 +127,7 @@
                 X: =1.42
                 ZIndex: =1
 
-                Home_Button_5 As button:
+                Home_Button_2 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =App.Theme.Colors.Primary
                     Color: =If(IsMatch(Active_Page,"Home"),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
@@ -158,7 +158,7 @@
                     X: =0.00
                     ZIndex: =2
 
-                Resource_List_Button_5 As button:
+                Resource_List_Button_2 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =App.Theme.Colors.Primary
                     Color: =If(IsMatch(Active_Page,"Resource List"),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
@@ -173,7 +173,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);
+                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -189,7 +189,7 @@
                     X: =0.00
                     ZIndex: =3
 
-                Open_List_Button_5 As button:
+                Open_List_Button_2 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =App.Theme.Colors.Primary
                     Color: =If(IsMatch(Active_Page,"Open List"),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
@@ -204,7 +204,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Open List");Navigate(Open_List_Screen);
+                    OnSelect: =Set(Active_Page,"Open List");Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -220,7 +220,7 @@
                     X: =0.00
                     ZIndex: =4
 
-                Proposed_List_Button_5 As button:
+                Proposed_List_Button_2 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =App.Theme.Colors.Primary
                     Color: =If(IsMatch(Active_Page,"Proposed List"),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
@@ -235,7 +235,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Proposed List");Navigate(Proposed_List_Screen);
+                    OnSelect: =Set(Active_Page,"Proposed List");Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -251,7 +251,7 @@
                     X: =0.00
                     ZIndex: =5
 
-                Blocked_List_Button_5 As button:
+                Blocked_List_Button_2 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =App.Theme.Colors.Primary
                     Color: =If(IsMatch(Active_Page,"Blocked List"),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
@@ -266,7 +266,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Blocked List");Navigate(Blocked_List_Screen);
+                    OnSelect: =Set(Active_Page,"Blocked List");Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -282,7 +282,7 @@
                     X: =0.00
                     ZIndex: =6
 
-                Project_List_Button_5 As button:
+                Project_List_Button_2 As button:
                     AlignInContainer: =AlignInContainer.Stretch
                     BorderColor: =App.Theme.Colors.Primary
                     Color: =If(IsMatch(Active_Page,"Project List"),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
@@ -331,7 +331,7 @@
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
                 RadiusTopRight: =8
-                Width: =If(displaySideMenu,Parent.Width-(SidebarContainer2_7.Width+20),Parent.Width)
+                Width: =If(displaySideMenu,Parent.Width-(SidebarContainer2_4.Width+20),Parent.Width)
                 X: =1.42
                 ZIndex: =2
 
