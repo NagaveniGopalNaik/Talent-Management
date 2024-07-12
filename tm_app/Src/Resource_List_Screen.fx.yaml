@@ -528,7 +528,7 @@
                                         "Resource List", true,
                                         "Open List", true,
                                         "Proposed List", true,
-                                        "Blocked List", true
+                                        "Blocked List",true
                                     ) &&
                                     (
                                         IsBlank(Resource_Data_Search.Value) || 
