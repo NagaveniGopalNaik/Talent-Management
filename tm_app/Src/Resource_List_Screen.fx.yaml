@@ -695,7 +695,7 @@
                             PaddingLeft: =40
                             PaddingRight: =0
                             PaddingTop: =0
-                            Text: =Concatenate(ThisItem.'Project Codename'.'Project Codename',"(",ThisItem.'Project Codename'.'Client Name',")"," - ",ThisItem.'Percentage of Allocation',"%")
+                            Text: =Concatenate(ThisItem.'Project Codename'.'Client Name')
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth - 86
                             X: =16
@@ -714,7 +714,7 @@
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =12
-                            Text: =Concatenate(ThisItem.'Start Date'," - ",ThisItem.'Release Date')
+                            Text: =Concatenate(ThisItem.'Project Codename'.'Project Codename'," - ",ThisItem.'Allocation Status'," - ",ThisItem.'Percentage of Allocation',"%")
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Title2.Width
                             X: =Title2.X
@@ -733,7 +733,7 @@
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =12
-                            Text: =If(IsBlank(ThisItem.Skillset),Concatenate(ThisItem.'Allocation Status'),Concatenate(ThisItem.'Allocation Status'," - ",ThisItem.Skillset))
+                            Text: =Concatenate(ThisItem.'Start Date'," - ",ThisItem.'Release Date')
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Title2.Width
                             X: =Title2.X
