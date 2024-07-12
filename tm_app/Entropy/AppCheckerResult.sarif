@@ -304,7 +304,7 @@
                 },
                 "region": {
                   "charLength": 20,
-                  "charOffset": 100,
+                  "charOffset": 331,
                   "snippet": {
                     "text": "Lower('Employee Id')"
                   }
@@ -344,7 +344,7 @@
                 },
                 "region": {
                   "charLength": 67,
-                  "charOffset": 89,
+                  "charOffset": 320,
                   "snippet": {
                     "text": "StartsWith(Lower('Employee Id'), Lower(Resource_Data_Search.Value))"
                   }
@@ -384,7 +384,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 76,
+                  "charOffset": 303,
                   "snippet": {
                     "text": "||"
                   }
@@ -424,7 +424,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 157,
+                  "charOffset": 388,
                   "snippet": {
                     "text": "||"
                   }
@@ -464,7 +464,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 239,
+                  "charOffset": 474,
                   "snippet": {
                     "text": "||"
                   }
@@ -504,7 +504,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 322,
+                  "charOffset": 561,
                   "snippet": {
                     "text": "||"
                   }
@@ -544,7 +544,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 406,
+                  "charOffset": 649,
                   "snippet": {
                     "text": "||"
                   }
@@ -584,7 +584,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 477,
+                  "charOffset": 724,
                   "snippet": {
                     "text": "||"
                   }
@@ -624,7 +624,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 565,
+                  "charOffset": 816,
                   "snippet": {
                     "text": "||"
                   }
@@ -664,7 +664,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 637,
+                  "charOffset": 892,
                   "snippet": {
                     "text": "||"
                   }
@@ -704,7 +704,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 708,
+                  "charOffset": 967,
                   "snippet": {
                     "text": "||"
                   }
@@ -744,7 +744,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 792,
+                  "charOffset": 1055,
                   "snippet": {
                     "text": "||"
                   }
@@ -784,7 +784,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 876,
+                  "charOffset": 1143,
                   "snippet": {
                     "text": "||"
                   }
@@ -824,7 +824,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 958,
+                  "charOffset": 1229,
                   "snippet": {
                     "text": "||"
                   }
@@ -864,7 +864,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1042,
+                  "charOffset": 1317,
                   "snippet": {
                     "text": "||"
                   }
@@ -904,7 +904,47 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1135,
+                  "charOffset": 240,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Resource_List_Screen",
+                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1418,
                   "snippet": {
                     "text": "&&"
                   }
