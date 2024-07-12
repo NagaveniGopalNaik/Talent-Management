@@ -1,6 +1,14 @@
 {
   "QualifiedValues": [
     {
+      "Kind": "default.cds_tl_project_forms",
+      "Namespace": "Projects (Forms)",
+      "Values": {
+        "Information": "22c13740-50b4-4561-b669-f3509d96d971",
+        "Project Main Form": "b15c4bda-0e54-4b14-b2ca-72c0f55fa1e3"
+      }
+    },
+    {
       "Kind": "default.cds_tl_resource_forms",
       "Namespace": "Resources (Forms)",
       "Values": {
@@ -8,11 +16,10 @@
       }
     },
     {
-      "Kind": "default.cds_tl_project_forms",
-      "Namespace": "Projects (Forms)",
+      "Kind": "default.cds_tl_project_allocation_forms",
+      "Namespace": "Project_Allocations (Forms)",
       "Values": {
-        "Information": "22c13740-50b4-4561-b669-f3509d96d971",
-        "Project Main Form": "b15c4bda-0e54-4b14-b2ca-72c0f55fa1e3"
+        "Information": "054a4807-b6fa-4bd9-9f02-f8092f7b1ab3"
       }
     },
     {
@@ -59,13 +66,6 @@
       "Namespace": "Geos (Forms)",
       "Values": {
         "Information": "130d455f-f1f3-41ce-aadd-ef5ec28aff50"
-      }
-    },
-    {
-      "Kind": "default.cds_tl_project_allocation_forms",
-      "Namespace": "Project_Allocations (Forms)",
-      "Values": {
-        "Information": "054a4807-b6fa-4bd9-9f02-f8092f7b1ab3"
       }
     }
   ]

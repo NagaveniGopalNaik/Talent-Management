@@ -519,54 +519,99 @@
                         BorderStyle: =BorderStyle.Dashed
                         Default: =If(isSearch,First(Resouce_List.AllItems))
                         DelayItemLoading: =true
-                        Items: |
+                        Items: |-
                             =SortByColumns(
                                 Filter(
                                     Resources,
-                                    Switch(
-                                        Active_Page,
-                                        "Resource List", true,
-                                        "Open List", true,
-                                        "Proposed List", true,
-                                        "Blocked List",true
-                                    ) &&
-                                    (
-                                        IsBlank(Resource_Data_Search.Value) || 
-                                        StartsWith(Lower('Employee Id'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Employee Name'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Contact Number'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Office Email Id'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower(Band), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Years of Experience'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower(State), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower(City), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Office Location'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Date of Joining'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Primary Skill'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Secondary Skill'), Lower(Resource_Data_Search.Value)) ||
-                                        StartsWith(Lower('Employment Status'), Lower(Resource_Data_Search.Value))
-                                    ) &&
-                                    (
-                                        !Apply_Resource_Filter ||
-                                        (
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Employee ID" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Employee Id'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Employee Name" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Employee Name'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Contact Number" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Contact Number'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Official Email ID" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Office Email Id'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Band" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower(Band), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Years of Experience" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Years of Experience'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "State" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower(State), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "City" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower(City), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Office Location" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Office Location'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Date of Joining" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Date of Joining'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Primary Skill" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Primary Skill'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Secondary Skill" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Secondary Skill'), Lower(Blocked_List_Data_3.SelectedText.Value))) ||
-                                            Blocked_List_Sort_Field_3.Selected.Value = "Employment Status" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(Lower('Employment Status'), Lower(Blocked_List_Data_3.SelectedText.Value)))
-                                        )
-                                    )
-                                ),
-                                "tl_employeename",  // Field to sort by
-                                If(Resource_List_Sort, "Descending", "Ascending")  // Sort direction
+                                    (Switch(Active_Page,"Resource List",true,"Open List",true,"Proposed List",true
+                            ,"Blocked List",true
+                            )&&
+                                    (IsBlank(Resource_Data_Search.Value) || StartsWith(
+                                        Lower('Employee Id'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Employee Name'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Contact Number'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Office Email Id'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower(Band),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Years of Experience'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower(State),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower(City),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Office Location'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Date of Joining'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Primary Skill'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Secondary Skill'),
+                                        Lower(Resource_Data_Search.Value)
+                                    ) || StartsWith(
+                                        Lower('Employment Status'),
+                                        Lower(Resource_Data_Search.Value)
+                                    )) && (!Apply_Resource_Filter || (Blocked_List_Sort_Field_3.Selected.Value = "Employee ID" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Employee Id'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Employee Name" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Employee Name'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Contact Number" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Contact Number'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Official Email ID" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Office Email Id'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Band" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower(Band),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Years of Experience" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Years of Experience'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "State" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower(State),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "City" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower(City),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Office Location" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Office Location'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Date of Joining" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Date of Joining'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Primary Skill" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Primary Skill'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Secondary Skill" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Secondary Skill'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    )) || Blocked_List_Sort_Field_3.Selected.Value = "Employment Status" && (IsBlank(Blocked_List_Data_3.SelectedText.Value) || StartsWith(
+                                        Lower('Employment Status'),
+                                        Lower(Blocked_List_Data_3.SelectedText.Value)
+                                    ))))
+                                )),
+                                "tl_employeename",
+                                If(
+                                    Resource_List_Sort,
+                                    "Descending",
+                                    "Ascending"
+                                )
                             )
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =150
