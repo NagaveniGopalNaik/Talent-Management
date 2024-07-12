@@ -1993,14 +1993,14 @@
                                 Color: =App.Theme.Colors.Darker30
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledColor: =RGBA(244, 244, 244, 1)
-                                Height: =25
+                                Height: =20
                                 Icon: =Icon.Reset
                                 OnSelect: =ResetForm(Project_Allocation_Form);NewForm(Project_Allocation_Form)
                                 Tooltip: ="Reset Form"
                                 Visible: =New_Project_Allocation&& !EditForm && IsMatch(Active_Page,"Resource List")
-                                Width: =25
-                                X: =469
-                                Y: =5
+                                Width: =20
+                                X: =12
+                                Y: =10
                                 ZIndex: =2
 
                             Icon5 As icon.Save:
@@ -2008,14 +2008,14 @@
                                 Color: =App.Theme.Colors.Darker30
                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                 DisabledColor: =RGBA(244, 244, 244, 1)
-                                Height: =25
+                                Height: =20
                                 Icon: =Icon.Save
                                 OnSelect: =SubmitForm(Project_Allocation_Form)
                                 Tooltip: ="Save Form"
                                 Visible: =New_Project_Allocation && IsMatch(Active_Page,"Resource List")
-                                Width: =25
-                                X: =507
-                                Y: =5
+                                Width: =20
+                                X: =517
+                                Y: =10
                                 ZIndex: =3
 
                         Project_Allocation_Form As form.PowerApps_CoreControls_Form:
