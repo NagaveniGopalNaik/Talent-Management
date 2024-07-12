@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "tl_project_allocation",
-    "MaxGetRowsCount": 500,
     "Name": "Project_Allocations",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
