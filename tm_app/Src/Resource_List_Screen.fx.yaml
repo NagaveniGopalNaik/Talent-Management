@@ -2440,7 +2440,7 @@
 
                                 "DataCardValue33_2 As 'Text input'":
                                     AccessibleLabel: =Parent.DisplayName
-                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayMode: =DisplayMode.View
                                     FontSize: =10
                                     Height: =32
                                     Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -2512,7 +2512,7 @@
                                     Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                     Required: =Parent.Required
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Value: =Parent.Default
+                                    Value: =ThisItem.'Project Codename'.'Reporting Manager'
                                     Width: =Parent.Width - 48
                                     X: =24
                                     Y: =DataCardKey24.Y + DataCardKey24.Height + 4
@@ -2575,12 +2575,12 @@
 
                                 "DataCardValue24 As 'Text input'":
                                     AccessibleLabel: =Parent.DisplayName
-                                    DisplayMode: =Parent.DisplayMode
+                                    DisplayMode: =DisplayMode.View
                                     Height: =32
                                     Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                     Required: =Parent.Required
                                     ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                                    Value: =Parent.Default
+                                    Value: =ThisItem.'Project Codename'.'Delivery Head'
                                     Width: =Parent.Width - 48
                                     X: =24
                                     Y: =DataCardKey23.Y + DataCardKey23.Height + 4
