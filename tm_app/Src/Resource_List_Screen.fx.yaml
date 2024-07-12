@@ -1941,6 +1941,7 @@
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         Visible: =New_Project_Allocation
+                        Width: =Parent.Width
                         ZIndex: =7
 
                         Container7 As groupContainer.manualLayoutContainer:
