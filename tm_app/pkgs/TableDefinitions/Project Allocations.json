@@ -3,10 +3,6 @@
   "EntityName": "Project Allocations",
   "environmentVariableName": "",
   "InstanceUrl": "https://org0894fe3c.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "tl_projectallocations",
-    "logicalName": "tl_projectallocation"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org0894fe3c.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('tl_projectallocation')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
