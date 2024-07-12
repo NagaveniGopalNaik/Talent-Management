@@ -2475,6 +2475,139 @@
                                     Y: =DataCardKey42_2.Y
                                     ZIndex: =4
 
+                            "'Reporting Manager_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="tl_reportingmanager"
+                                Default: =ThisItem.'Reporting Manager'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_reportingmanager)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =70
+                                MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_reportingmanager)
+                                Required: =false
+                                Update: =DataCardValue25.Value
+                                Width: =Parent.Width/2.1
+                                X: =0
+                                Y: =2
+                                ZIndex: =1
+
+                                DataCardKey24 As Text:
+                                    AutoHeight: =true
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Size: =10
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue25 As 'Text input'":
+                                    AccessibleLabel: =Parent.DisplayName
+                                    DisplayMode: =DisplayMode.View
+                                    Height: =32
+                                    Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                    Required: =Parent.Required
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Value: =Parent.Default
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey24.Y + DataCardKey24.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage24 As Text:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue25.Y + DataCardValue25.Height
+                                    ZIndex: =3
+
+                                StarVisible24 As Text:
+                                    Align: ='TextCanvas.Align'.Center
+                                    AutoHeight: =true
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =RGBA(255, 0, 0, 1)
+                                    Height: =30
+                                    Size: =10
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey24.Y
+                                    ZIndex: =4
+
+                            "'Delivery Head_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="tl_deliveryhead"
+                                Default: =ThisItem.'Delivery Head'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@Project_Allocations],DataSourceInfo.DisplayName,tl_deliveryhead)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =70
+                                MaxLength: =DataSourceInfo([@Project_Allocations], DataSourceInfo.MaxLength, tl_deliveryhead)
+                                Required: =false
+                                Update: =DataCardValue24.Value
+                                Width: =Parent.Width/2.1
+                                X: =1
+                                Y: =2
+                                ZIndex: =1
+
+                                DataCardKey23 As Text:
+                                    AutoHeight: =true
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =22
+                                    Size: =10
+                                    Text: =Parent.DisplayName
+                                    Weight: ='TextCanvas.Weight'.Semibold
+                                    Width: =Parent.Width - 48
+                                    Wrap: =false
+                                    X: =24
+                                    Y: =10
+                                    ZIndex: =1
+
+                                "DataCardValue24 As 'Text input'":
+                                    AccessibleLabel: =Parent.DisplayName
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =32
+                                    Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                    Required: =Parent.Required
+                                    ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                    Value: =Parent.Default
+                                    Width: =Parent.Width - 48
+                                    X: =24
+                                    Y: =DataCardKey23.Y + DataCardKey23.Height + 4
+                                    ZIndex: =2
+
+                                ErrorMessage23 As Text:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: =Parent.Error
+                                    Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =Parent.Width - 48
+                                    Wrap: =true
+                                    X: =24
+                                    Y: =DataCardValue24.Y + DataCardValue24.Height
+                                    ZIndex: =3
+
+                                StarVisible23 As Text:
+                                    Align: ='TextCanvas.Align'.Center
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =30
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    X: =0
+                                    Y: =DataCardKey23.Y
+                                    ZIndex: =4
+
                             "'Start Date_DataCard1_2' As typedDataCard.fluentV9DateTimeEditCard":
                                 BorderColor: =App.Theme.Colors.Darker40
                                 BorderStyle: =BorderStyle.Solid
@@ -2488,7 +2621,7 @@
                                 Update: =If(Not IsBlank(DateValue6_2.SelectedDate), DateTime(Year(DateValue6_2.SelectedDate), Month(DateValue6_2.SelectedDate), Day(DateValue6_2.SelectedDate), Value(HourValue6_2.Selected.Value), Value(MinuteValue6_2.Selected.Value), Second(DateValue6_2.SelectedDate)))
                                 Width: =Parent.Width/2.1
                                 X: =0
-                                Y: =2
+                                Y: =3
                                 ZIndex: =1
 
                                 DataCardKey38_2 As Text:
@@ -2592,7 +2725,7 @@
                                 Update: =If(Not IsBlank(DateValue5_2.SelectedDate), DateTime(Year(DateValue5_2.SelectedDate), Month(DateValue5_2.SelectedDate), Day(DateValue5_2.SelectedDate), Value(HourValue5_2.Selected.Value), Value(MinuteValue5_2.Selected.Value), Second(DateValue5_2.SelectedDate)))
                                 Width: =Parent.Width/2.1
                                 X: =1
-                                Y: =2
+                                Y: =3
                                 ZIndex: =1
 
                                 DataCardKey36_2 As Text:
@@ -2697,7 +2830,7 @@
                                 Update: =DataCardValue30_2.Value
                                 Width: =Parent.Width/2.1
                                 X: =0
-                                Y: =3
+                                Y: =4
                                 ZIndex: =1
 
                                 DataCardKey37_2 As Text:
@@ -2771,7 +2904,7 @@
                                 Update: =AllocationStatus_2.Selected.Value
                                 Width: =Parent.Width/2.1
                                 X: =1
-                                Y: =4
+                                Y: =5
                                 ZIndex: =1
 
                                 DataCardKey39_2 As Text:
@@ -2869,7 +3002,7 @@
                                 Visible: =false
                                 Width: =139
                                 X: =0
-                                Y: =5
+                                Y: =6
                                 ZIndex: =1
 
                                 DataCardKey34_2 As Text:
@@ -3100,7 +3233,7 @@
                                 Update: =Value(DataCardValue26_2.Value)
                                 Width: =Parent.Width/2.1
                                 X: =1
-                                Y: =3
+                                Y: =4
                                 ZIndex: =6
 
                                 DataCardKey29_2 As Text:
@@ -3172,7 +3305,7 @@
                                 Update: =DataCardValue24_2.Selected.Value
                                 Width: =Parent.Width/2.1
                                 X: =0
-                                Y: =4
+                                Y: =5
                                 ZIndex: =6
 
                                 DataCardKey23_2 As Text:
