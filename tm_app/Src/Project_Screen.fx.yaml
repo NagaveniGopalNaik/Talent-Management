@@ -433,7 +433,7 @@
                         RadiusTopRight: =4
                         ZIndex: =6
 
-                        Button2 As button:
+                        project_details_button As button:
                             BorderColor: =App.Theme.Colors.Primary
                             Color: =If((!Project_Details),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
                             DisabledBorderColor: =RGBA(244, 244, 244, 1)
@@ -459,7 +459,7 @@
                             Y: =1
                             ZIndex: =4
 
-                        Button2_2 As button:
+                        Allocated_Resource_button As button:
                             BorderColor: =App.Theme.Colors.Primary
                             Color: =If(!(Allocated_Resources),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
                             DisabledBorderColor: =RGBA(244, 244, 244, 1)
@@ -484,81 +484,6 @@
                             Width: =134
                             X: =134
                             ZIndex: =6
-
-                        Button2_4 As button:
-                            BorderColor: =App.Theme.Colors.Primary
-                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Fill: =App.Theme.Colors.Primary
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            HoverBorderColor: =App.Theme.Colors.Darker10
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =App.Theme.Colors.Darker10
-                            PressedBorderColor: =App.Theme.Colors.Darker40
-                            PressedColor: =Self.Color
-                            PressedFill: =App.Theme.Colors.Darker40
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Size: =10
-                            Text: ="Project Details"
-                            Width: =134
-                            X: =40
-                            Y: =40
-                            ZIndex: =7
-
-                        Button2_5 As button:
-                            BorderColor: =App.Theme.Colors.Primary
-                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Fill: =App.Theme.Colors.Primary
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            HoverBorderColor: =App.Theme.Colors.Darker10
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =App.Theme.Colors.Darker10
-                            PressedBorderColor: =App.Theme.Colors.Darker40
-                            PressedColor: =Self.Color
-                            PressedFill: =App.Theme.Colors.Darker40
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Size: =10
-                            Text: ="Project Details"
-                            Width: =134
-                            X: =60
-                            Y: =60
-                            ZIndex: =8
-
-                        Button2_6 As button:
-                            BorderColor: =App.Theme.Colors.Primary
-                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            Fill: =App.Theme.Colors.Primary
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            HoverBorderColor: =App.Theme.Colors.Darker10
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =App.Theme.Colors.Darker10
-                            PressedBorderColor: =App.Theme.Colors.Darker40
-                            PressedColor: =Self.Color
-                            PressedFill: =App.Theme.Colors.Darker40
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
-                            Size: =10
-                            Text: ="Project Details"
-                            Width: =134
-                            X: =80
-                            Y: =60
-                            ZIndex: =9
 
                 Container1 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -1484,6 +1409,31 @@
                             X: =13
                             Y: =47
                             ZIndex: =9
+
+                    Container5_1 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: = If((Allocated_Resources && !View_Resource && CountRows(Allocated_Resource_List.AllItems)= 0),true,false)
+                        ZIndex: =7
+
+                        No_Record_Text_1 As label:
+                            Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =App.Theme.Colors.Darker10
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Height: =541
+                            Size: =13
+                            Text: ="No Records Found"
+                            Visible: = true
+                            Width: =553
+                            X: =4
+                            ZIndex: =1
 
                 Total_item As label:
                     BorderColor: =App.Theme.Colors.Darker40
