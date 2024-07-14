@@ -33,6 +33,7 @@
       "tl_project_allocation_ClientName_tl_project": "Project_Allocations (tl_project_allocation_ClientName_tl_project)",
       "tl_project_allocation_Project_tl_project": "Project_Allocations (tl_project_allocation_Project_tl_project)",
       "tl_project_allocation_ProjectCodename_tl_project": "Project_Allocations (tl_project_allocation_ProjectCodename_tl_project)",
+      "tl_Project_Allocation_tl_Project_tl_Project": "Project_Allocations (tl_Project_Allocation_tl_Project_tl_Project)",
       "tl_project_AsyncOperations": "System Jobs",
       "tl_project_BulkDeleteFailures": "Bulk Delete Failures",
       "tl_project_DuplicateBaseRecord": "Duplicate Records (tl_project_DuplicateBaseRecord)",

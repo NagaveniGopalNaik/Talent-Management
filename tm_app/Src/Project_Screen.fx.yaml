@@ -565,7 +565,7 @@
                         LoadingSpinner: =LoadingSpinner.Data
                         OnSelect: =EditForm(Form1);
                         TemplatePadding: =0
-                        TemplateSize: =116
+                        TemplateSize: =80
                         Width: =Parent.Width*0.5
                         X: =40
                         ZIndex: =1
@@ -581,7 +581,7 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =18
+                            Size: =16
                             Text: =ThisItem.'Project Codename'
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Parent.TemplateWidth - 86
@@ -600,6 +600,7 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
+                            Size: =12
                             Text: =ThisItem.'Client Name'
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Title4.Width
@@ -618,7 +619,7 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =12
+                            Size: =10
                             Text: =ThisItem.'Project Type'
                             VerticalAlign: =VerticalAlign.Top
                             Width: =Title4.Width
@@ -639,11 +640,11 @@
 
                         Rectangle5 As rectangle:
                             BorderColor: =App.Theme.Colors.Darker40
-                            Fill: =App.Theme.Colors.Darker30
+                            Fill: =RGBA(215,28,76,0.23)
                             Height: =Parent.TemplateHeight - Separator4.Height
                             OnSelect: =Select(Parent)
                             Visible: =ThisItem.IsSelected
-                            Width: =4
+                            Width: =Parent.Width
                             ZIndex: =6
 
                         Selected_Field_For_Delete As checkbox:
@@ -659,9 +660,10 @@
                             OnSelect: =Select(Parent)
                             Size: =18
                             Text: =""
+                            Visible: =!ThisItem.isFromDigite
                             Width: =26
-                            X: =14
-                            Y: =49
+                            X: =11
+                            Y: =27
                             ZIndex: =7
 
                     Form1 As form.PowerApps_CoreControls_Form:
