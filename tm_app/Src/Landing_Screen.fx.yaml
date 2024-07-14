@@ -12,7 +12,7 @@
         LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
         PaddingBottom: =16
-        PaddingLeft: =
+        PaddingLeft: =16
         PaddingRight: =16.00
         PaddingTop: =16.00
         RadiusBottomLeft: =4
