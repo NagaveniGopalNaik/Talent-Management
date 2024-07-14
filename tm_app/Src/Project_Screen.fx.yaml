@@ -173,7 +173,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);
+                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -204,7 +204,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Open List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);
+                    OnSelect: =Set(Active_Page,"Open List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true)
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -235,7 +235,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Proposed List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);
+                    OnSelect: =Set(Active_Page,"Proposed List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true)
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -266,7 +266,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Blocked List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);
+                    OnSelect: =Set(Active_Page,"Blocked List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true)
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -297,7 +297,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Navigate(Project_Screen);Set(Active_Page,"Project List");Set(New_Project_Allocation,false);Set(Project_Details,true);Set(Allocated_Resources,false);Set(Creat_Projects,false);Set(View_Resource,false);
+                    OnSelect: =Navigate(Project_Screen);Set(Active_Page,"Project List");Set(New_Project_Allocation,false);Set(Project_Details,true);Set(Allocated_Resources,false);Set(Creat_Projects,false);Set(View_Resource,false);Set(ApplyFilter,false);Reset(ProjectSearch);Set(isSearch,true)
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -360,10 +360,10 @@
                         Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(Allocated_Resources,false);Set(Project_Details,true)
+                        OnChange: =Set(Allocated_Resources,false);Set(Project_Details,true);Set(isSearch,true)
                         PaddingLeft: =
                         Placeholder: ="Search"
-                        TriggerOutput: ="FocusOut"
+                        TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
                         Width: =320
                         X: =0
                         Y: =0
@@ -504,6 +504,7 @@
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderStyle: =BorderStyle.Dashed
+                        Default: =If(isSearch,First(Gallery2.AllItems))
                         DelayItemLoading: =true
                         Items: |-
                             =SortByColumns(
@@ -4116,13 +4117,13 @@
             DisabledBorderColor: =RGBA(244, 244, 244, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(191, 15, 112, 1)
+            Fill: =App.Theme.Colors.Primary
             Font: =App.Theme.Font
             FontWeight: =FontWeight.Semibold
             HoverBorderColor: =App.Theme.Colors.Darker10
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =App.Theme.Colors.Darker10
-            OnSelect: =Set(ApplyFilter,true);Set(ProjectFilterScreen,false)
+            OnSelect: =Set(ApplyFilter,true);Set(ProjectFilterScreen,false);Set(isSearch,true)
             PressedBorderColor: =App.Theme.Colors.Darker40
             PressedColor: =Self.Color
             PressedFill: =App.Theme.Colors.Darker40
@@ -4814,6 +4815,29 @@
         X: =812
         Y: =494
         ZIndex: =25
+
+    Timer3 As timer:
+        AutoStart: =true
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =1500
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnTimerEnd: =Set(isSearch,false)
+        OnTimerStart: =isSearch
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Start: =isSearch
+        Visible: =false
+        X: =389
+        Y: =37
+        ZIndex: =26
 
     Create_Project_Screen As group:
         Height: =5
