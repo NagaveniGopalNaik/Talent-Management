@@ -338,11 +338,11 @@
                 Container2 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
-                    Height: =70
+                    Height: =40
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingLeft: =If(displaySideMenu,155,270)
+                    PaddingLeft: =If(displaySideMenu,180,290)
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -354,10 +354,10 @@
                         BasePaletteColor: =RGBA(189, 178, 176, 1)
                         BorderRadius: =10
                         DisplayMode: =DisplayMode.Edit
-                        Font: =Font.Arial
+                        Font: =App.Theme.Font
                         FontColor: =RGBA(0, 0, 0, 1)
-                        FontSize: =14
-                        Height: =40
+                        FontSize: =12
+                        Height: =32
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingLeft: =
@@ -374,14 +374,14 @@
                         Color: =App.Theme.Colors.Darker30
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(244, 244, 244, 1)
-                        Height: =30
+                        Height: =20
                         Icon: =Icon.Trash
                         OnSelect: |-
                             =ForAll(
                                 Filter(Gallery2.AllItems,Selected_Field_For_Delete.Value=true),  // Ensure this is correctly referencing the checkbox
                                 Remove(Projects, ThisRecord)  // Use ThisRecord instead of ThisItem
                             )
-                        Width: =30
+                        Width: =20
                         ZIndex: =2
 
                     sort As icon.ArrowsUpDown:
@@ -390,10 +390,10 @@
                         Color: =App.Theme.Colors.Darker30
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(244, 244, 244, 1)
-                        Height: =25
+                        Height: =18
                         Icon: =Icon.Sort
                         OnSelect: =Set(Project_Sort,If(Project_Sort,false,true))
-                        Width: =25
+                        Width: =18
                         ZIndex: =3
 
                     filter_off As icon.Filter:
@@ -402,11 +402,11 @@
                         Color: =App.Theme.Colors.Darker30
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(244, 244, 244, 1)
-                        Height: =25
+                        Height: =18
                         Icon: =Icon.Filter
                         OnSelect: =Set(ProjectFilterScreen,true)
                         Visible: =!ApplyFilter
-                        Width: =25
+                        Width: =18
                         ZIndex: =4
 
                     filter_On As icon.Filter:
@@ -1225,8 +1225,8 @@
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =App.Theme.Font
-                    PaddingLeft: =If(displaySideMenu,400,535)
-                    Size: =13
+                    PaddingLeft: =If(displaySideMenu,465,575)
+                    Size: =10
                     Text: |-
                         ="Total items: " & CountRows(Gallery2.AllItems)
                     ZIndex: =3
