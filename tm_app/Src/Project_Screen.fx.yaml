@@ -868,6 +868,7 @@
                             "DateValue3 As 'Date picker'":
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 OnChange: =Set(Project_update,true)
                                 SelectedDate: =Parent.Default
@@ -968,6 +969,7 @@
                             "DataCardValue2 As 'Text input'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                 OnChange: =Set(Project_update,true)
@@ -1038,6 +1040,7 @@
                             "DataCardValue3 As 'Text input'":
                                 AccessibleLabel: =Parent.DisplayName
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
                                 OnChange: =Set(Project_update,true)
@@ -1108,6 +1111,7 @@
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 Items: =Choices('Project Type')
                                 OnChange: =Set(Project_update,true)
@@ -1175,6 +1179,7 @@
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 Items: =Choices(Geo)
                                 OnChange: =Set(Project_update,true)
@@ -1241,6 +1246,7 @@
                             "DateValue1 As 'Date picker'":
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 OnChange: =Set(Project_update,true)
                                 SelectedDate: =Parent.Default
@@ -1341,6 +1347,7 @@
                                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                                 DefaultSelectedItems: =[Parent.Default]
                                 DisplayMode: =Parent.DisplayMode
+                                FontSize: =10
                                 Height: =32
                                 Items: =Choices('Project Status')
                                 OnChange: =Set(Project_update,true)
