@@ -297,7 +297,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Navigate(Project_Screen);Set(Active_Page,"Project List");Set(New_Project_Allocation,false);
+                    OnSelect: =Navigate(Project_Screen);Set(Active_Page,"Project List");Set(New_Project_Allocation,false);Set(Project_Details,true);Set(Allocated_Resources,false);Set(Creat_Projects,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -482,6 +482,86 @@
 
                         Button2 As button:
                             BorderColor: =App.Theme.Colors.Primary
+                            Color: =If((!Project_Details),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If((Project_Details),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: =Set(Allocated_Resources,false);Set(Create_Projects,false);Set(Project_Details,true)
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: ="Project Details"
+                            Width: =134
+                            Y: =1
+                            ZIndex: =4
+
+                        Button2_1 As button:
+                            BorderColor: =App.Theme.Colors.Primary
+                            Color: =If((!Create_Project),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If((Create_Project),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: =Set(Allocated_Resources,false);Set(Create_Projects,true);Set(Project_Details,false);Set(Create_Project,true)
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: ="Create Project"
+                            Width: =134
+                            X: =134
+                            Y: =1
+                            ZIndex: =5
+
+                        Button2_2 As button:
+                            BorderColor: =App.Theme.Colors.Primary
+                            Color: =If(!(Allocated_Resources),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If((Allocated_Resources),App.Theme.Colors.Primary,RGBA(255, 255, 255, 1))
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: =Set(Allocated_Resources,true);Set(Create_Projects,false);Set(Project_Details,false)
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: ="Allocated Resources"
+                            Width: =134
+                            X: =268
+                            Y: =1
+                            ZIndex: =6
+
+                        Button2_4 As button:
+                            BorderColor: =App.Theme.Colors.Primary
                             DisabledBorderColor: =RGBA(244, 244, 244, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -501,10 +581,11 @@
                             Size: =10
                             Text: ="Project Details"
                             Width: =134
-                            Y: =1
-                            ZIndex: =4
+                            X: =40
+                            Y: =40
+                            ZIndex: =7
 
-                        Button2_1 As button:
+                        Button2_5 As button:
                             BorderColor: =App.Theme.Colors.Primary
                             DisabledBorderColor: =RGBA(244, 244, 244, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -523,13 +604,13 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Size: =10
-                            Text: ="Create Project"
+                            Text: ="Project Details"
                             Width: =134
-                            X: =134
-                            Y: =1
-                            ZIndex: =5
+                            X: =60
+                            Y: =60
+                            ZIndex: =8
 
-                        Button2_2 As button:
+                        Button2_6 As button:
                             BorderColor: =App.Theme.Colors.Primary
                             DisabledBorderColor: =RGBA(244, 244, 244, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -548,11 +629,11 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Size: =10
-                            Text: ="Allocated Resources"
+                            Text: ="Project Details"
                             Width: =134
-                            X: =268
-                            Y: =1
-                            ZIndex: =6
+                            X: =80
+                            Y: =60
+                            ZIndex: =9
 
                 Container1 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -2154,7 +2235,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =26
             Icon: =Icon.Cancel
-            OnSelect: =Set(Create_Project,false)
+            OnSelect: =Set(Create_Project,false);Set(Allocated_Resources,false);Set(Project_Details,false);Set(Create_Projects,true);
             Visible: =Create_Project
             Width: =30
             X: =916
