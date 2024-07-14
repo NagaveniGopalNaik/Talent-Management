@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 20,
-                  "charOffset": 230,
+                  "charLength": 40,
+                  "charOffset": 522,
                   "snippet": {
-                    "text": "Lower('Employee Id')"
+                    "text": "IsMatch('Allocation Status', \"Proposed\")"
                   }
                 }
               },
@@ -39,47 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "Lower"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 101,
-                  "charOffset": 206,
-                  "snippet": {
-                    "text": "StartsWith(\n            Lower('Employee Id'),\n            Lower(Resource_Data_Search.Value)\n        )"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "StartsWith"
+              "IsMatch"
             ],
             "id": "issue"
           },
@@ -104,9 +64,9 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 203,
+                  "charOffset": 519,
                   "snippet": {
-                    "text": "||"
+                    "text": "&&"
                   }
                 }
               },
@@ -143,10 +103,50 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 2,
-                  "charOffset": 308,
+                  "charLength": 39,
+                  "charOffset": 751,
                   "snippet": {
-                    "text": "||"
+                    "text": "IsMatch('Allocation Status', \"Blocked\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Resource_List_Screen",
+                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsMatch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 748,
+                  "snippet": {
+                    "text": "&&"
                   }
                 }
               },
@@ -183,10 +183,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 2,
-                  "charOffset": 415,
+                  "charLength": 770,
+                  "charOffset": 55,
                   "snippet": {
-                    "text": "||"
+                    "text": "Switch(Active_Page,\"Resource List\",true,\"Open List\",(100 - Sum(\n                Filter(\n                    Project_Allocations,\n                    Resource.'Employee Id' = 'Employee Id'\n                ) As FilteredAllocations,\n                FilteredAllocations.'Percentage of Allocation'\n            ) > 0\n),\"Proposed List\",(!IsEmpty(\n                Filter(\n                    Project_Allocations,\n                    Resource.'Employee Id' = 'Employee Id' && IsMatch('Allocation Status', \"Proposed\")\n                )\n            )\n)\n,\"Blocked List\",(!IsEmpty(\n                Filter(\n                    Project_Allocations,\n                    Resource.'Employee Id' = 'Employee Id' && IsMatch('Allocation Status', \"Blocked\")\n                )\n            ))\n)"
                   }
                 }
               },
@@ -199,7 +199,7 @@
           ],
           "message": {
             "arguments": [
-              "Filter"
+              "Switch"
             ],
             "id": "issue"
           },
@@ -224,407 +224,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 523,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 632,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 728,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 841,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 938,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 1034,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 1143,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 1252,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 1359,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 1468,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Resource_List_Screen",
-                "type": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Resource_List_Screen.ScreenContainer3_6.BottomContainer3_6.MainContainer2_6.Container1_4.Resouce_List.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 155,
+                  "charOffset": 825,
                   "snippet": {
                     "text": "&&"
                   }
@@ -664,7 +264,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1580,
+                  "charOffset": 2250,
                   "snippet": {
                     "text": "&&"
                   }
