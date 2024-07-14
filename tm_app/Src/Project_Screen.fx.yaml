@@ -670,11 +670,11 @@
                     Form1 As form.PowerApps_CoreControls_Form:
                         BorderColor: =App.Theme.Colors.Darker40
                         DataSource: =Projects
-                        Fill: =RGBA(191, 15, 112, 0.52)
+                        Fill: =RGBA(215,28,76,0.23)
                         Item: =Gallery2.Selected
                         LayoutMinHeight: =250
                         LayoutMinWidth: =400
-                        NumberOfColumns: =1
+                        NumberOfColumns: =2
                         OnSuccess: |
                             =Notify("Project Updated successfully!", NotificationType.Success)
                         UseFluentV9Cards: =true
@@ -689,12 +689,12 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_startdate)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =If(Not IsBlank(DateValue3.SelectedDate), DateTime(Year(DateValue3.SelectedDate), Month(DateValue3.SelectedDate), Day(DateValue3.SelectedDate), Value(HourValue3.Selected.Value), Value(MinuteValue3.Selected.Value), Second(DateValue3.SelectedDate)))
-                            Width: =Parent.Width
+                            Width: =Parent.Width/2.1
                             X: =0
-                            Y: =4
+                            Y: =2
                             ZIndex: =1
 
                             DataCardKey9 As Text:
@@ -788,11 +788,11 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_name)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             MaxLength: =DataSourceInfo([@Projects], DataSourceInfo.MaxLength, tl_name)
                             Required: =true
                             Update: =DataCardValue2.Value
-                            Width: =Parent.Width
+                            Width: =Parent.Width/2.1
                             X: =0
                             Y: =0
                             ZIndex: =5
@@ -858,13 +858,13 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_projectcodename)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             MaxLength: =DataSourceInfo([@Projects], DataSourceInfo.MaxLength, tl_projectcodename)
                             Required: =true
                             Update: =DataCardValue3.Value
-                            Width: =Parent.Width
-                            X: =0
-                            Y: =1
+                            Width: =Parent.Width/2.1
+                            X: =1
+                            Y: =0
                             ZIndex: =5
 
                             DataCardKey4 As Text:
@@ -928,12 +928,12 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_projecttype)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =DataCardValue6.Selected.Value
-                            Width: =Parent.Width
+                            Width: =Parent.Width/2.1
                             X: =0
-                            Y: =2
+                            Y: =1
                             ZIndex: =5
 
                             DataCardKey7 As Text:
@@ -995,12 +995,12 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_geo)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =DataCardValue1.Selected.Value
-                            Width: =Parent.Width
-                            X: =0
-                            Y: =3
+                            Width: =Parent.Width/2.1
+                            X: =1
+                            Y: =1
                             ZIndex: =5
 
                             DataCardKey2 As Text:
@@ -1062,12 +1062,12 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_enddate)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =If(Not IsBlank(DateValue1.SelectedDate), DateTime(Year(DateValue1.SelectedDate), Month(DateValue1.SelectedDate), Day(DateValue1.SelectedDate), Value(HourValue1.Selected.Value), Value(MinuteValue1.Selected.Value), Second(DateValue1.SelectedDate)))
-                            Width: =Form1.Width
-                            X: =0
-                            Y: =5
+                            Width: =Parent.Width/2.1
+                            X: =1
+                            Y: =2
                             ZIndex: =5
 
                             DataCardKey1 As Text:
@@ -1161,12 +1161,12 @@
                             DisplayMode: =Parent.DisplayMode
                             DisplayName: =DataSourceInfo([@Projects],DataSourceInfo.DisplayName,tl_projectstatus)
                             Fill: =RGBA(0, 0, 0, 0)
-                            Height: =70
+                            Height: =80
                             Required: =true
                             Update: =DataCardValue5.Selected.Value
-                            Width: =Parent.Width
+                            Width: =Parent.Width/2.1
                             X: =0
-                            Y: =6
+                            Y: =3
                             ZIndex: =5
 
                             DataCardKey6 As Text:
