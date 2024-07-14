@@ -3423,6 +3423,7 @@
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =App.Theme.Font
+                    Height: =20
                     PaddingLeft: =If(displaySideMenu,470,580)
                     Size: =10
                     Text: |-
