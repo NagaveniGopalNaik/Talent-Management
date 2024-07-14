@@ -2669,7 +2669,7 @@
 
                                 Client_Name_Data_3 As Combobox.pcfdataset:
                                     AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
-                                    DefaultSelectedItems: =If(EditForm,(LookUp(ClientDetails,Value=Allocated_Resource_List.Selected.'Project Codename'.'Client Name')),First(ClientDetails))
+                                    DefaultSelectedItems: =LookUp(Distinct(Projects,'Client Name'),Value=Allocated_Resource_List.Selected.'Project Codename'.'Client Name')
                                     DisplayMode: =DisplayMode.View
                                     FontSize: =10
                                     Height: =32
