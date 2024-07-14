@@ -424,7 +424,7 @@
 
                     Container3 As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =Parent.Height
+                        Height: =40
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         RadiusBottomLeft: =4
@@ -453,8 +453,8 @@
                             Size: =15
                             Text: ="Update"
                             Width: =84
-                            X: =151
-                            Y: =25
+                            X: =465
+                            Y: =5
                             ZIndex: =2
 
                         Project_Create As button:
@@ -475,10 +475,84 @@
                             PressedFill: =App.Theme.Colors.Darker40
                             Size: =15
                             Text: ="Create"
-                            Width: =99
-                            X: =27
-                            Y: =25
+                            Width: =39
+                            X: =425
+                            Y: =5
                             ZIndex: =3
+
+                        Button2 As button:
+                            BorderColor: =App.Theme.Colors.Primary
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =App.Theme.Colors.Primary
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: ="Project Details"
+                            Width: =134
+                            Y: =1
+                            ZIndex: =4
+
+                        Button2_1 As button:
+                            BorderColor: =App.Theme.Colors.Primary
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =App.Theme.Colors.Primary
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: ="Create Project"
+                            Width: =134
+                            X: =134
+                            Y: =1
+                            ZIndex: =5
+
+                        Button2_2 As button:
+                            BorderColor: =App.Theme.Colors.Primary
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =App.Theme.Colors.Primary
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =10
+                            Text: ="Allocated Resources"
+                            Width: =134
+                            X: =268
+                            Y: =1
+                            ZIndex: =6
 
                 Container1 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer

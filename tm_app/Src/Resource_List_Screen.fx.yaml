@@ -436,7 +436,7 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Size: =10
-                            Text: ="Employee Details"
+                            Text: ="Project Details"
                             Width: =139
                             X: =2
                             Y: =2
