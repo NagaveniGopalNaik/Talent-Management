@@ -18,7 +18,7 @@ App As appinfo:
         Set(Project_update,false);
         Set(New_Project_Allocation,false);
         Set(Display_Project_Details,true);
-        
+        Set(View_Resource,false);
         Set(Blocked_List_Sort,false);
         Set(Apply_Block_Filter,false);
         Set(BlockedFilterScreen,false);

@@ -296,7 +296,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Navigate(Project_Screen);Set(Active_Page,"Project List");Set(New_Project_Allocation,false);Set(Project_Details,true);Set(Allocated_Resources,false);Set(Creat_Projects,false);
+                    OnSelect: =Navigate(Project_Screen);Set(Active_Page,"Project List");Set(New_Project_Allocation,false);Set(Project_Details,true);Set(Allocated_Resources,false);Set(Creat_Projects,false);Set(View_Resource,false);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
