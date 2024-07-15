@@ -416,11 +416,11 @@
                         Color: =App.Theme.Colors.Darker30
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(244, 244, 244, 1)
-                        Height: =25
+                        Height: =20
                         Icon: =Icon.FilterFlatFilled
                         OnSelect: =Set(ProjectFilterScreen,true)
                         Visible: =ApplyFilter
-                        Width: =25
+                        Width: =20
                         ZIndex: =5
 
                     Container3 As groupContainer.manualLayoutContainer:
