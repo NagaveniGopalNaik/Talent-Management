@@ -436,7 +436,7 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Size: =10
-                            Text: ="Project Details"
+                            Text: ="Resource Details"
                             Width: =139
                             X: =2
                             Y: =2
