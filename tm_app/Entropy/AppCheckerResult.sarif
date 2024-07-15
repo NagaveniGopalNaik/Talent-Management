@@ -2211,36 +2211,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Project_Screen",
-                "type": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off.TabIndex"
                 }
               ],
@@ -2265,6 +2235,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Project_Screen",
+                "type": "Project_Screen.ScreenContainer3_1.BottomContainer3_1.MainContainer2_1.Container2.filter_off"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [

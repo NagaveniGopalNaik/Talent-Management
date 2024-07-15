@@ -405,7 +405,22 @@
                         DisabledColor: =RGBA(244, 244, 244, 1)
                         Height: =18
                         Icon: =Icon.Filter
-                        OnSelect: =Set(ProjectFilterScreen,true)
+                        OnSelect: |-
+                            =Set(ProjectFilterScreen,true);ClearCollect(
+                                DistinctGeoValues,
+                                Distinct(Gallery2.AllItems, tl_geo).Value
+                            );ClearCollect(
+                                DistinctProjectStatusValues,
+                                Distinct(Gallery2.AllItems,'Project Status').Value
+                            );ClearCollect(
+                                DistinctProjectTypeValues,
+                                Distinct(Gallery2.AllItems,'Project Type').Value
+                            );ClearCollect(DistictClientNameValues,Distinct(
+                                    Projects,
+                                    'Client Name'
+                                ).Value);ClearCollect(ProjectCodeName,Distinct(
+                                    Projects,'Project Codename'
+                                ).Value)
                         Visible: =!ApplyFilter
                         Width: =18
                         ZIndex: =4
@@ -4024,7 +4039,7 @@
         HoverBorderColor: =App.Theme.Colors.Darker10
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =App.Theme.Colors.Darker10
-        OnSelect: =Set(ApplyFilter,false);Set(ProjectFilterScreen,false)
+        OnSelect: =Set(ApplyFilter,false);Set(ProjectFilterScreen,false);Set(isSearch,true)
         PressedBorderColor: =App.Theme.Colors.Darker40
         PressedColor: =Self.Color
         PressedFill: =App.Theme.Colors.Darker40
@@ -4152,15 +4167,8 @@
                 =Switch(
                     projectSortColumn,
                     "Client Name",
-                    Distinct(
-                        Projects,
-                        'Client Name'
-                    ),
-                    "Project Codename",
-                    Distinct(
-                        Projects,
-                        'Project Codename'
-                    )
+                    DistictClientNameValues,
+                    "Project Codename",ProjectCodeName
                 )
             OnChange: =Set(ApplyFilter,false);
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -4185,7 +4193,7 @@
             Font: =App.Theme.Font
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
-            Items: =["Yet to Start","In Progress","On Hold","Closed"]
+            Items: =Filter(Choices(Projects[@tl_projectstatus]),ThisRecord in DistinctProjectStatusValues)
             OnChange: =Set(ApplyFilter,false);
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
@@ -4209,7 +4217,7 @@
             Font: =App.Theme.Font
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
-            Items: =["India","US","EMEA","UK","Japan","Others"]
+            Items: =Filter(Choices(Projects[@tl_geo]),ThisRecord in DistinctGeoValues)
             OnChange: =Set(ApplyFilter,false);
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
@@ -4233,7 +4241,7 @@
             Font: =App.Theme.Font
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =App.Theme.Colors.Lighter70
-            Items: =["T&M","FP","Managed Services","T&M (Staff Augmentation)","Internal","secondment","Marketing"]
+            Items: =Filter(Choices(Projects[@tl_projecttype]),ThisRecord in DistinctProjectTypeValues)
             OnChange: =Set(ApplyFilter,false);
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =App.Theme.Colors.Darker30
