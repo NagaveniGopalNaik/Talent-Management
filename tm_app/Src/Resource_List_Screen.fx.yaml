@@ -484,7 +484,26 @@
                             HoverBorderColor: =App.Theme.Colors.Darker10
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =App.Theme.Colors.Darker10
-                            OnSelect: =Set(Resource_employee_details,false);Set(Resource_allocated_project,false);Set(New_Project_Allocation,true);NewForm(Project_Allocation_Form);Set(Display_Project_Details,false);Set(EditForm,false);
+                            OnSelect: |
+                                =Set(over_Allocation,(Sum(
+                                    Filter(
+                                        Project_Allocations,
+                                        Resource.'Employee Id' = Resouce_List.Selected.'Employee Id'
+                                    ),
+                                    'Percentage of Allocation'
+                                )>=100));
+                                If(
+                                    over_Allocation,
+                                    false,
+                                    Concurrent(
+                                        Set(Resource_employee_details, false),
+                                        Set(Resource_allocated_project, false),
+                                        Set(New_Project_Allocation, true),
+                                        NewForm(Project_Allocation_Form),
+                                        Set(Display_Project_Details, false),
+                                        Set(EditForm, false)
+                                    )
+                                )
                             PressedBorderColor: =App.Theme.Colors.Darker40
                             PressedColor: =Self.Color
                             PressedFill: =App.Theme.Colors.Darker40
@@ -3755,4 +3774,114 @@
         X: =1196
         Y: =592
         ZIndex: =19
+
+    confirmation As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Primary
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =20
+        Text: ="Confirmation"
+        Visible: =over_Allocation
+        Width: =560
+        X: =403
+        Y: =219
+        ZIndex: =22
+
+    Label4 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =105
+        LineHeight: =1.6
+        Text: =Concatenate(Resouce_List.Selected.'Employee Name'," is already fully allocated to projects. Do you want to allocate a new project to this employee?")
+        Visible: =over_Allocation
+        Width: =498
+        X: =432
+        Y: =283
+        ZIndex: =23
+
+    Button2 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |
+            =Set(over_Allocation,false);Concurrent(
+                    Set(Resource_employee_details, false),
+                    Set(Resource_allocated_project, false),
+                    Set(New_Project_Allocation, true),
+                    NewForm(Project_Allocation_Form),
+                    Set(Display_Project_Details, false),
+                    Set(EditForm, false)
+                )
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =15
+        Text: ="Yes"
+        Visible: =over_Allocation
+        Width: =60
+        X: =608
+        Y: =410
+        ZIndex: =24
+
+    Button2_1 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: =Set(over_Allocation,false)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =15
+        Text: ="No"
+        Visible: =over_Allocation
+        Width: =60
+        X: =698
+        Y: =410
+        ZIndex: =25
+
+    "'Over Allocation Screen' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        Model_Background_6 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(0, 0, 0, 0.56)
+            Height: =768
+            Visible: =over_Allocation
+            Width: =1366
+            ZIndex: =20
+
+        Modal_Content_screen_7 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =Color.White
+            Height: =271
+            Visible: =over_Allocation
+            Width: =511
+            X: =432
+            Y: =205
+            ZIndex: =21
 
