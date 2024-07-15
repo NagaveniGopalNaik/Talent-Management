@@ -342,7 +342,7 @@
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingLeft: =If(displaySideMenu,180,290)
+                    PaddingLeft: =If(displaySideMenu,160,270)
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -425,6 +425,21 @@
                         Width: =18
                         ZIndex: =4
 
+                    Icon8 As icon.Add:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =20
+                        Icon: =Icon.Add
+                        OnSelect: =NewForm(Form4);Set(Create_Project,true);
+                        Tooltip: ="Create Project"
+                        Width: =20
+                        X: =7
+                        Y: =3
+                        ZIndex: =5
+
                     filter_On As icon.Filter:
                         AlignInContainer: =AlignInContainer.Center
                         BorderColor: =App.Theme.Colors.Darker40
@@ -436,7 +451,7 @@
                         OnSelect: =Set(ProjectFilterScreen,true)
                         Visible: =ApplyFilter
                         Width: =20
-                        ZIndex: =5
+                        ZIndex: =6
 
                     Container3 As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.Light
@@ -447,7 +462,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        ZIndex: =6
+                        ZIndex: =7
 
                         project_details_button As button:
                             BorderColor: =App.Theme.Colors.Primary
@@ -727,19 +742,6 @@
                                 X: =531
                                 Y: =3
                                 ZIndex: =1
-
-                            Icon8 As icon.Add:
-                                BorderColor: =App.Theme.Colors.Darker40
-                                Color: =App.Theme.Colors.Darker30
-                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                DisabledColor: =RGBA(244, 244, 244, 1)
-                                Height: =20
-                                Icon: =Icon.Add
-                                OnSelect: =Set(Allocated_Resources,false);Set(Create_Projects,true);Set(Project_Details,false);Set(Create_Project,true)
-                                Width: =20
-                                X: =7
-                                Y: =3
-                                ZIndex: =2
 
                         Form1 As form.PowerApps_CoreControls_Form:
                             BorderColor: =App.Theme.Colors.Darker40
@@ -4260,7 +4262,7 @@
         DefaultMode: =FormMode.New
         Height: =330
         NumberOfColumns: =2
-        OnSuccess: =Set(Create_Project,false);Notify("Project Created successfully!", NotificationType.Success);Set(Create_Project,false);Set(Allocated_Resources,true);Set(Project_Details,false);
+        OnSuccess: =Set(Create_Project,false);Notify("Project Created successfully!", NotificationType.Success);Set(Create_Project,false);
         UseFluentV9Cards: =true
         Visible: =Create_Project
         Width: =Modal_Content_screen_1.Width
@@ -4916,7 +4918,7 @@
             HoverBorderColor: =App.Theme.Colors.Darker10
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =App.Theme.Colors.Darker10
-            OnSelect: =SubmitForm(Form4);Set(Create_Project,false);Set(Allocated_Resources,true);Set(Project_Details,false);
+            OnSelect: =SubmitForm(Form4);Set(Create_Project,false);
             PressedBorderColor: =App.Theme.Colors.Darker40
             PressedColor: =Self.Color
             PressedFill: =App.Theme.Colors.Darker40
