@@ -695,7 +695,7 @@
                             OnSelect: =Select(Parent)
                             Size: =18
                             Text: =""
-                            Visible: =!ThisItem.isFromDigite
+                            Visible: =ThisItem.isFromDigite
                             Width: =26
                             X: =11
                             Y: =27
