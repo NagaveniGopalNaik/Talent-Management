@@ -27,7 +27,7 @@
             DropShadow: =DropShadow.Light
             Fill: =App.Theme.Colors.Primary
             FillPortions: =0
-            Height: =75
+            Height: =Max(Parent.Height/8,70)
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
