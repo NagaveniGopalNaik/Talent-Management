@@ -88,7 +88,8 @@
       "126800002": "EMEA",
       "126800003": "UK",
       "126800004": "Japan",
-      "126800005": "Others"
+      "126800005": "Others",
+      "126800006": "ROM"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": true,
@@ -193,8 +194,7 @@
       "126800003": "Terminated",
       "126800004": "Yet to Start",
       "126800005": "Open",
-      "126800006": "ReOpen",
-      "126800007": "-1"
+      "126800006": "Re-Open"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": true,
@@ -219,7 +219,8 @@
       "126800003": "T&M (Staff Augmentation)",
       "126800004": "Internal",
       "126800005": "secondment",
-      "126800006": "Marketing"
+      "126800006": "Marketing",
+      "126800007": "AMC"
     },
     "OptionSetIsBooleanValued": false,
     "OptionSetIsGlobal": true,

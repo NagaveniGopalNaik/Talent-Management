@@ -103,7 +103,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =949.09
+            Width: =Parent.Width
             X: =11.38
             ZIndex: =3
 
@@ -326,7 +326,7 @@
                 RadiusBottomRight: =8
                 RadiusTopLeft: =8
                 RadiusTopRight: =8
-                Width: =946.24
+                Width: =If(displaySideMenu,Parent.Width-SidebarContainer2_5.Width-20,Parent.Width)
                 X: =1.42
                 ZIndex: =2
 
