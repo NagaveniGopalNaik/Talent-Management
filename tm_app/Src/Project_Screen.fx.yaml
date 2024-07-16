@@ -418,8 +418,7 @@
                                 DistinctProjectTypeValues,
                                 Distinct(Gallery2.AllItems,'Project Type').Value
                             );ClearCollect(DistictClientNameValues,Distinct(
-                                    Projects,
-                                    'Client Name'
+                                    Projects,'Client Name'
                                 ).Value);ClearCollect(ProjectCodeName,Distinct(
                                     Projects,'Project Codename'
                                 ).Value)
