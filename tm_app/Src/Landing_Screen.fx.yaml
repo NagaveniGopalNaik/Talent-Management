@@ -84,7 +84,7 @@
                 Image: ='robosoft_logo-removebg-preview'
                 PaddingRight: =0.00
                 PaddingTop: =0.00
-                Width: =Parent.Width*0.1
+                Width: =Max(Parent.Width*0.1,100)
                 X: =45.53
                 ZIndex: =3
 
