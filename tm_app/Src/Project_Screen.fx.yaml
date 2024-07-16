@@ -2,6 +2,7 @@
     BackgroundImage: =robo_background
     Fill: =
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    Width: =App.Width
 
     ScreenContainer3_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
