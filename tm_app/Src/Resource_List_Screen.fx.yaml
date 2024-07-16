@@ -91,6 +91,7 @@
 
         BottomContainer3_6 As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =16
             LayoutMinHeight: =100
@@ -318,6 +319,7 @@
                 DropShadow: =DropShadow.Bold
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =0
+                Height: =Parent.Height
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
