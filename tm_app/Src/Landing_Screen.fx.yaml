@@ -27,7 +27,6 @@
             Fill: =App.Theme.Colors.Primary
             FillPortions: =0
             Height: =75
-            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -63,6 +62,7 @@
                 Color: =App.Theme.Colors.Primary
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Fill: =Color.White
+                FillPortions: =1
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =Parent.Height
