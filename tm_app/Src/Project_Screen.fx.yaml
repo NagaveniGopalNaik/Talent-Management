@@ -427,6 +427,19 @@
                         Width: =18
                         ZIndex: =4
 
+                    filter_On As icon.Filter:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =19
+                        Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ProjectFilterScreen,true)
+                        Visible: =ApplyFilter
+                        Width: =19
+                        ZIndex: =5
+
                     Icon8 As icon.Add:
                         AlignInContainer: =AlignInContainer.Center
                         BorderColor: =App.Theme.Colors.Darker40
@@ -440,19 +453,6 @@
                         Width: =20
                         X: =7
                         Y: =3
-                        ZIndex: =5
-
-                    filter_On As icon.Filter:
-                        AlignInContainer: =AlignInContainer.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(244, 244, 244, 1)
-                        Height: =20
-                        Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ProjectFilterScreen,true)
-                        Visible: =ApplyFilter
-                        Width: =20
                         ZIndex: =6
 
                     Container3 As groupContainer.manualLayoutContainer:
