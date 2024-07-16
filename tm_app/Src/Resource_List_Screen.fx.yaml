@@ -336,6 +336,17 @@
                 X: =1.42
                 ZIndex: =2
 
+                Label1 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =App.Theme.Colors.Primary
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    Height: =Parent.Height-footer_Text_3.Height
+                    Size: =16
+                    Text: ="No Records Found"
+                    ZIndex: =1
+
                 Container2_4 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
@@ -348,7 +359,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    ZIndex: =1
+                    Visible: =CountRows(Resouce_List.AllItems)>0
+                    ZIndex: =2
 
                     "Resource_Data_Search As 'Text input'":
                         AccessibleLabel: ="Search"
@@ -532,7 +544,8 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    ZIndex: =2
+                    Visible: =CountRows(Resouce_List.AllItems)>0
+                    ZIndex: =3
 
                     "Resouce_List As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                         BorderColor: =App.Theme.Colors.Darker40
@@ -3466,7 +3479,8 @@
                     Size: =10
                     Text: |-
                         ="Total items: " & CountRows(Resouce_List.AllItems)
-                    ZIndex: =3
+                    Visible: =CountRows(Resouce_List.AllItems)>0
+                    ZIndex: =4
 
                 footer_Text_3 As label:
                     Align: =Align.Center
