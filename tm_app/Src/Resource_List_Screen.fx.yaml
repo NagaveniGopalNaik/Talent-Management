@@ -345,6 +345,7 @@
                     Height: =Parent.Height-footer_Text_3.Height
                     Size: =16
                     Text: ="No Records Found"
+                    Width: =Parent.Width
                     ZIndex: =1
 
                 Container2_4 As groupContainer.horizontalAutoLayoutContainer:
