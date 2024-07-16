@@ -174,7 +174,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Select(reset_Button);Reset(Resource_Data_Search);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true)
+                    OnSelect: =Set(Active_Page,"Resource List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Reset(Resource_Data_Search);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true)
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -336,15 +336,13 @@
                 X: =1.42
                 ZIndex: =2
 
-                Label1 As label:
-                    Align: =Align.Center
+                Image3 As image:
                     BorderColor: =App.Theme.Colors.Darker40
-                    Color: =App.Theme.Colors.Primary
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
                     Height: =Parent.Height-footer_Text_3.Height
-                    Size: =16
-                    Text: ="No Records Found"
+                    Image: ='no-record-image'
+                    Visible: =CountRows(Resouce_List.AllItems)=0
                     Width: =Parent.Width
                     ZIndex: =1
 
@@ -361,7 +359,7 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Visible: =CountRows(Resouce_List.AllItems)>0
-                    ZIndex: =2
+                    ZIndex: =3
 
                     "Resource_Data_Search As 'Text input'":
                         AccessibleLabel: ="Search"
@@ -546,7 +544,7 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Visible: =CountRows(Resouce_List.AllItems)>0
-                    ZIndex: =3
+                    ZIndex: =4
 
                     "Resouce_List As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                         BorderColor: =App.Theme.Colors.Darker40
@@ -3481,7 +3479,7 @@
                     Text: |-
                         ="Total items: " & CountRows(Resouce_List.AllItems)
                     Visible: =CountRows(Resouce_List.AllItems)>0
-                    ZIndex: =4
+                    ZIndex: =5
 
                 footer_Text_3 As label:
                     Align: =Align.Center
@@ -3494,7 +3492,7 @@
                     Height: =20
                     Size: =8
                     Text: ="Robosoft TM Copyright @ 2024"
-                    ZIndex: =5
+                    ZIndex: =6
 
     Button2_3 As button:
         BorderColor: =App.Theme.Colors.Primary

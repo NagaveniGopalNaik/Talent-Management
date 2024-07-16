@@ -235,7 +235,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Proposed List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true);
+                    OnSelect: =Set(Active_Page,"Proposed List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
@@ -266,7 +266,7 @@
                     HoverColor: =RGBA(191, 15, 112, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     LayoutMinWidth: =200
-                    OnSelect: =Set(Active_Page,"Blocked List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Set(isSearch,true);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true);
+                    OnSelect: =Set(Active_Page,"Blocked List");Navigate(Resource_List_Screen);Set(Resource_employee_details,true);Set(Resource_allocated_project,false);Set(New_Project_Allocation,false);Set(EditForm,false);Reset(Resource_Data_Search);Set(isSearch,false);Set(Resource_List_Sort,false);Set(Apply_Resource_Filter,false);Set(isSearch,true);
                     PaddingRight: =5.00
                     PaddingTop: =5.00
                     PressedBorderColor: =Color.White
