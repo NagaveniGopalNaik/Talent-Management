@@ -19,7 +19,7 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1366
+        Width: =Parent.Width
         ZIndex: =1
 
         HeaderContainer3 As groupContainer.horizontalAutoLayoutContainer:
