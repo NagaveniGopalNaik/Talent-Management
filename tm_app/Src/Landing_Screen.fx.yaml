@@ -27,6 +27,7 @@
             Fill: =App.Theme.Colors.Primary
             FillPortions: =0
             Height: =75
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
