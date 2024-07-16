@@ -154,7 +154,7 @@
                     RadiusTopRight: =0
                     Size: =16
                     Text: ="Home"
-                    Width: =280.31
+                    Width: =Parent.Width
                     X: =0.00
                     ZIndex: =2
 
@@ -185,7 +185,7 @@
                     RadiusTopRight: =0
                     Size: =16
                     Text: ="Resource List"
-                    Width: =280.31
+                    Width: =Parent.Width
                     X: =0.00
                     ZIndex: =3
 
@@ -216,7 +216,7 @@
                     RadiusTopRight: =0
                     Size: =16
                     Text: ="Open List"
-                    Width: =280.31
+                    Width: =Parent.Width
                     X: =0.00
                     ZIndex: =4
 
@@ -247,7 +247,7 @@
                     RadiusTopRight: =0
                     Size: =16
                     Text: ="Proposed List"
-                    Width: =280.31
+                    Width: =Parent.Width
                     X: =0.00
                     ZIndex: =5
 
@@ -278,7 +278,7 @@
                     RadiusTopRight: =0
                     Size: =16
                     Text: ="Blocked List"
-                    Width: =280.31
+                    Width: =Parent.Width
                     X: =0.00
                     ZIndex: =6
 
@@ -309,7 +309,7 @@
                     RadiusTopRight: =0
                     Size: =16
                     Text: ="Project List"
-                    Width: =280.31
+                    Width: =Parent.Width
                     X: =0.00
                     ZIndex: =7
 
