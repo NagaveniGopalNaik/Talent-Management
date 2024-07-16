@@ -37,7 +37,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =949.09
+            Width: =Parent.Width
             X: =11.38
             ZIndex: =1
 
