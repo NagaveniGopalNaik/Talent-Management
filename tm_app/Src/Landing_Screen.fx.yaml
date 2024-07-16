@@ -69,7 +69,7 @@
                 PaddingRight: =0
                 Size: =20
                 Text: ="Home"
-                Width: =Parent.Width*0.85
+                Width: =Parent.Width-Image1.Width-Icon1.Width
                 ZIndex: =2
 
             Image1 As image:
