@@ -399,7 +399,17 @@
                         DisabledColor: =RGBA(244, 244, 244, 1)
                         Height: =20
                         Icon: =Icon.Filter
-                        OnSelect: =Set(ResourceFilterScreen,true);Set(isSearch,true)
+                        OnSelect: |-
+                            =Set(ResourceFilterScreen,true);Set(isSearch,true);ClearCollect(ResourceFilterData,Distinct(
+                                    Filter(Resources,(100 - Sum(
+                                            Filter(
+                                                Project_Allocations,
+                                                Resource.'Employee Id' = 'Employee Id'
+                                            ) As FilteredAllocations,
+                                            FilteredAllocations.'Percentage of Allocation'
+                                        ) > 0
+                            )),'Bench Percentage'
+                                ).Value)
                         Visible: =!Apply_Resource_Filter
                         Width: =20
                         ZIndex: =4
@@ -3642,96 +3652,109 @@
                         ),
                         'Employee Id'
                     ),
-                     "Employee Name",
+                    "Employee Name",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Employee Name'
+                        ),
+                        'Employee Name'
                     ),
                     "Contact Number",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Contact Number'
+                        ),
+                        'Contact Number'
                     ),
                     "Official Email ID",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Office Email Id'
+                        ),
+                        'Office Email Id'
                     ),
                     "Band",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),Band
+                        ),
+                        Band
                     ),
                     "Years of Experience",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Years of Experience'
+                        ),
+                        'Years of Experience'
                     ),
                     "State",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),State
+                        ),
+                        State
                     ),
                     "City",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),City
+                        ),
+                        City
                     ),
                     "Office Location",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Office Location'
+                        ),
+                        'Office Location'
                     ),
                     "Date of Joining",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Date of Joining'
+                        ),
+                        'Date of Joining'
                     ),
                     "Primary Skill",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Primary Skill'
+                        ),
+                        'Primary Skill'
                     ),
                     "Secondary Skill",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Secondary Skill'
+                        ),
+                        'Secondary Skill'
                     ),
                     "Employment Status",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),'Employment Status'
+                        ),
+                        'Employment Status'
                     ),
                     "LWD",
                     Distinct(
                         Filter(
                             Resources,
                             'Resources (Views)'.'Resource List'
-                        ),LWD
+                        ),
+                        LWD
                     )
                 )
             OnChange: =Set(Apply_Resource_Filter,false);
